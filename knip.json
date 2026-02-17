@@ -1,0 +1,9 @@
+{
+  "ignore": [
+    "vite-env.d.ts",
+    "src/i18next.d.ts",
+    "src/database.types.ts",
+    "supabase/**"
+  ],
+  "ignoreDependencies": ["baseline-browser-mapping", "supabase"]
+}

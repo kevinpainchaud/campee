@@ -1,0 +1,31 @@
+@reference "../../../index.css";
+
+.comparative-table {
+  @apply table-fixed;
+}
+
+.comparative-table thead th,
+.comparative-table tbody th,
+.comparative-table tbody td {
+  @apply py-4 md:py-8;
+}
+
+.comparative-table thead th {
+  @apply pb-0 max-md:w-[50vw];
+}
+
+.comparative-table thead th > * {
+  @apply m-auto max-w-10/12;
+}
+
+.comparative-table tbody tr:not(:last-child) {
+  @apply border-b border-b-black/20 dark:border-b-white/20;
+}
+
+.comparative-table tbody th {
+  @apply text-left font-normal;
+}
+
+.comparative-table tbody td > * {
+  @apply m-auto;
+}

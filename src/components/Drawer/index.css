@@ -1,0 +1,3 @@
+body[data-opened-drawer] {
+  @apply overflow-hidden;
+}

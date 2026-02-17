@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= app_name %> · <%= app_description %></title>
+    <meta name="description" content="<%= app_baseline %>" data-rh="true" />
+    <meta name="apple-mobile-web-app-title" content="<%= app_name %>" />
+    <meta
+      property="og:title"
+      content="<%= app_name %> · <%= app_description %>"
+    />
+    <meta property="og:description" content="<%= app_baseline %>" />
+    <meta property="og:image" content="<%= app_url %>/og-image-1200x630.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image" content="<%= app_url %>/og-image-1200x1200.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+    <meta name="author" content="<%= app_author %>" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script>
+      (function () {
+        const darkThemeEnabled = localStorage.getItem(
+          "<%= local_storage_key_prefix %>.darkThemeEnabled",
+        );
+        const systemThemeIsDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+
+        if (
+          darkThemeEnabled === "true" ||
+          (darkThemeEnabled === null && systemThemeIsDark)
+        ) {
+          document.documentElement.classList.add("dark");
+          document.documentElement.style.backgroundColor = "#18181b";
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="%VITE_UMAMI_WEBSITE_ID%"
+    ></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

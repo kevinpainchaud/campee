@@ -1,0 +1,289 @@
+{
+  "common": {
+    "actions": {
+      "back": "Back",
+      "close": "Close"
+    },
+    "app_baseline": "Your estimations, frictionless",
+    "app_description": "Planning poker online",
+    "form": {
+      "optional": "Optional",
+      "required": "Required",
+      "validation_errors": {
+        "max_length": "Maximum {{count}} characters allowed",
+        "min_length": "Minimum {{count}} characters required"
+      }
+    },
+    "navigation": {
+      "back_to_front_page_button_label": "Back to home",
+      "main_menu_label": "Main menu",
+      "main_menu_trigger_button_label": "Open main menu",
+      "other_menu_label": "Other",
+      "user_menu_label": "My account"
+    }
+  },
+  "components": {
+    "accessibility_controls": {
+      "dark_theme_enabling_button_title": "Enable dark theme",
+      "language_button_title": "Change language",
+      "language_successfully_modified_message": "Language successfully updated",
+      "light_theme_enabling_button_title": "Enable light theme"
+    },
+    "animations_feature_card": {
+      "title": "Animations"
+    },
+    "backface_card_style_field": {
+      "button_title": "Choose this card back"
+    },
+    "backface_card_styles_feature_card": {
+      "title": "Customizable card backs"
+    },
+    "confirm_modal": {
+      "cancel_button_label": "Cancel",
+      "confirm_button_label": "Confirm",
+      "title": "Are you sure?"
+    },
+    "feedback_drawer": {
+      "contact_by_email_message": "You can also contact us by email:",
+      "description": "An idea to improve? A bug to report? Use the form below to share your feedback with us!",
+      "from_input": {
+        "helper_text": "Necessary if you wish to receive a response from us",
+        "label": "Email"
+      },
+      "message_textarea": {
+        "label": "Message",
+        "placeholder": "An idea for a feature, a bug, etc..."
+      },
+      "submit_button_label": "Share my feedback",
+      "success_message": "Your feedback has been shared with us. Thank you 😊"
+    },
+    "multi_step_form": {
+      "next_step_button_label": "Continue",
+      "submit_button_label": "Submit"
+    },
+    "nudge_sending_feature_card": {
+      "title": "Send nudges"
+    },
+    "user_dropdown_content": {
+      "user_edit_drawer_toggle_button_label": "My information",
+      "user_voting_rooms_drawer_toggle_button_label": "My sessions"
+    },
+    "user_edit_drawer": {
+      "submit_button_label": "Update",
+      "success_message": "Your information has been updated",
+      "title": "My information"
+    },
+    "user_voting_room_drawer": {
+      "empty_state_description": "You haven't participated in any sessions yet.<br />Come back later.",
+      "empty_state_title": "No sessions",
+      "expiration_message": "Sessions automatically expire after one week of inactivity.",
+      "title": "My sessions"
+    },
+    "voting_room_card": {
+      "created_by": "created by",
+      "me": "me"
+    },
+    "voting_room_creation_drawer": {
+      "default_voting_room_name": "Session of {{today_date}}",
+      "error_message": "Unable to create session",
+      "submit_button_label": "Create session"
+    },
+    "voting_room_edition_drawer": {
+      "submit_button_label": "Update",
+      "success_message": "Session successfully updated"
+    },
+    "voting_room_joining_drawer": {
+      "error_message": "Failed to join session"
+    },
+    "voting_room_table": {
+      "empty_voting_room_state": {
+        "description": "Waiting for your teammates...",
+        "title": "Estimating is more fun together!"
+      }
+    }
+  },
+  "entities": {
+    "feedback": {
+      "actions": {
+        "share_feedback": "Share feedback"
+      },
+      "label": "Feedback"
+    },
+    "nudge": {
+      "actions": {
+        "send_nudge": "Send a nudge"
+      }
+    },
+    "profile": {
+      "props": {
+        "backface_card_style": "Card back style",
+        "company_name": "Company",
+        "display_name": "First name / Nickname"
+      }
+    },
+    "voting_room": {
+      "actions": {
+        "create_a_voting_room": "Start a session",
+        "join_voting_room": "Join session",
+        "leave_voting_room": "Leave session",
+        "reveal_votes": "Reveal votes",
+        "start_new_voting_round": "Start new vote"
+      },
+      "edition": {
+        "title": "Session settings"
+      },
+      "invitation": {
+        "qr_code": "Invitation QR code",
+        "qr_code_caption": "Scan to join",
+        "qr_code_required": "Invitation code required",
+        "see_qr_code_button_label": "View invitation QR code",
+        "voting_room_url_copied_message": "Invitation link copied",
+        "voting_room_url_copy_button_label": "Copy invitation link"
+      },
+      "label": "Session",
+      "props": {
+        "name": "Session name",
+        "voting_system": "Voting system"
+      }
+    }
+  },
+  "hooks": {
+    "use_static_page_content": {
+      "error_message": "Unable to load the {{language}} translation for this page"
+    },
+    "use_voting_room_leaving": {
+      "confirm_modal": {
+        "description": "You can always rejoin later if you have the share link.",
+        "title": "Are you sure you want to leave the session?"
+      }
+    }
+  },
+  "layouts": {
+    "main_layout": {
+      "footer": {
+        "contribute_on_github_button_label": "Contribute on GitHub",
+        "description": "If you've enjoyed this project, you can contribute to the source code or buy me a coffee. I would be very grateful.",
+        "legal_notices": "Legal notices",
+        "made_with": "Made with",
+        "title": "Support this project"
+      }
+    }
+  },
+  "pages": {
+    "error_page": {
+      "error_message_tooltip": "Error details:\n\n{{detailedErrorMessage}}pages.error_page.error_message_tooltip",
+      "retry_button_label": "Retry",
+      "title": "An error occurred"
+    },
+    "front_page": {
+      "context_section": {
+        "paragraph": "The idea for {{app_name}} was born from a personal observation. As a front-end developer in an agile team, I couldn't find a planning poker app that was elegant, free, and ad-free. I thought it would make a great <strong>side project</strong>. So I embarked on this adventure with no financial goal, just for the fun of it.",
+        "subtitle": "A word from the creator",
+        "title": "A bit of context"
+      },
+      "cta_section": {
+        "title": "Convinced?"
+      },
+      "featured_section": {
+        "free_feature_card": {
+          "description": "The application is completely free, with no limit on sessions or votes.",
+          "title": "Free"
+        },
+        "no_ad_feature_card": {
+          "description": "No advertisements will disrupt your team planning experience.",
+          "title": "Ad-free"
+        },
+        "no_registration_feature_card": {
+          "description": "No registration is required to use all the features.",
+          "title": "No registration"
+        }
+      },
+      "features_section": {
+        "title": "What does it look like?"
+      },
+      "hero_section": {
+        "title": "Your estimations,<br />frictionless"
+      },
+      "how_it_works_section": {
+        "paragraph": "Planning poker, also known as Scrum poker, is a <strong>collaborative estimation technique</strong> used by agile teams. Each team member secretly chooses a card representing their estimate of the effort required for a task. Once everyone has voted, the cards are revealed simultaneously to facilitate discussion and reach a consensus.",
+        "subtitle": "The concept",
+        "title": "How does it work?"
+      },
+      "why_choose_us_section": {
+        "comparison_points": {
+          "advanced_features": "Advanced features",
+          "immersive_ui": "Immersive interface",
+          "no_ad": "Ad-free",
+          "open_source": "Open Source",
+          "unlimited_and free": "Unlimited & free"
+        },
+        "concurrent_logo_alt": "{{concurrent_name}} logo",
+        "sub_subtitle": "How does {{app_name}} compare to other online Planning poker applications?",
+        "subtitle": "The comparison",
+        "title": "Why choose {{app_name}}?"
+      },
+      "why_use_it_section": {
+        "paragraph": "Planning poker helps <strong>avoid anchoring bias</strong> where one person's opinion influences others. By revealing estimates simultaneously, each member shares their perspective independently. This{\" \"} <strong>fosters constructive discussions</strong> and leads to more accurate and consensual estimates.",
+        "subtitle": "The benefits",
+        "title": "Why use it?"
+      }
+    },
+    "legal_notice": {
+      "title": "Legal Notice"
+    },
+    "not_found_page": {
+      "title": "Page not found"
+    },
+    "voting_room_page": {
+      "invite_dropdown": {
+        "trigger_button_label": "Invite"
+      },
+      "notifications": {
+        "name_changed_message": "{{user_display_name}} changed the session name to: {{new_name}}",
+        "new_voting_round_started_message": "{{user_display_name}} started a new vote",
+        "votes_revealed_message": "{{user_display_name}} revealed the votes",
+        "voting_system_changed_message": "{{user_display_name}} changed the voting system to: {{voting_system_label}}"
+      },
+      "nudge_received_message": "You received a nudge from {{user_display_name}}",
+      "voting_room_joining_confirm_modal": {
+        "cancel_button_label": "No, stay as spectator",
+        "confirm_button_label": "Yes, join session",
+        "description": "Would you like to join the session?",
+        "title": "Join session"
+      }
+    }
+  },
+  "providers": {
+    "auth": {
+      "sign_in_error_message": "Anonymous sign-in failed",
+      "user_not_found_error_message": "User not found"
+    }
+  },
+  "services": {
+    "feedback": {
+      "feedback_sent_error_message": "Feedback unable to send"
+    },
+    "nudge": {
+      "nudge_sent_error_message": "Unable to send nudge"
+    },
+    "participant": {
+      "participants_not_found_error_message": "Participants not found",
+      "vote_update_error_message": "Unable to update vote",
+      "voting_room_joining_error_message": "Unable to join session",
+      "voting_room_leaving_error_message": "Unable to leave session"
+    },
+    "profile": {
+      "profile_not_found_error_message": "User profile not found",
+      "profile_update_error_message": "Unable to update user",
+      "profiles_not_found_error_message": "User profiles not found"
+    },
+    "voting_room": {
+      "new_voting_round_start_error_message": "Unable to start a new vote",
+      "votes_reveal_error_message": "Unable to reveal votes",
+      "voting_room_creation_error_message": "Unable to create session",
+      "voting_room_not_found_error_message": "Session not found",
+      "voting_room_update_error_message": "Unable to update session",
+      "voting_rooms_not_found_error_message": "Sessions not found"
+    }
+  }
+}

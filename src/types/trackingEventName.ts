@@ -1,0 +1,15 @@
+export type TrackingEventName =
+  | "click_dark_theme_enabling_button"
+  | "click_voting_room_leaving_button"
+  | "click_invitation_link_copy_button"
+  | "click_light_theme_enabling_button"
+  | "click_qr_code_button"
+  | "click_voting_room_creation_button"
+  | "click_voting_room_joining_button"
+  | "click_user_voting_rooms_drawer_trigger_button"
+  | "create_voting_room"
+  | "reveal_votes"
+  | "send_nudge"
+  | "sign_up"
+  | "start_new_voting_round"
+  | "vote";

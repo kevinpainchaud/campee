@@ -1,0 +1,16 @@
+{
+  "tailwindCSS.classFunctions": ["React.createElement", "classNames"],
+  "tailwindCSS.experimental.classRegex": ["className:\\s*\"([^\"]*)\""],
+  "i18n-ally.displayLanguage": "en",
+  "i18n-ally.sourceLanguage": "en",
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.localesPaths": ["src/locales"],
+  "i18n-ally.pathMatcher": "{locale}/translation.json",
+  "i18n-ally.sortKeys": true,
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.enablePaths": [
+    "supabase"
+  ],
+  "git.ignoreLimitWarning": true
+}

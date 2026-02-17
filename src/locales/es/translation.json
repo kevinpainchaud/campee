@@ -1,0 +1,289 @@
+{
+  "common": {
+    "actions": {
+      "back": "Volver",
+      "close": "Cerca"
+    },
+    "app_baseline": "Sus estimaciones, sin fricción",
+    "app_description": "Planning poker en línea",
+    "form": {
+      "optional": "Opcional",
+      "required": "Obligatorio",
+      "validation_errors": {
+        "max_length": "Máximo {{count}} caracteres permitidos",
+        "min_length": "Mínimo {{count}} caracteres requeridos"
+      }
+    },
+    "navigation": {
+      "back_to_front_page_button_label": "Volver al inicio",
+      "main_menu_label": "Menú principal",
+      "main_menu_trigger_button_label": "Abrir menú principal",
+      "other_menu_label": "Otro",
+      "user_menu_label": "Mi cuenta"
+    }
+  },
+  "components": {
+    "accessibility_controls": {
+      "dark_theme_enabling_button_title": "Activar tema oscuro",
+      "language_button_title": "Cambiar idioma",
+      "language_successfully_modified_message": "Idioma actualizado correctamente",
+      "light_theme_enabling_button_title": "Activar tema claro"
+    },
+    "animations_feature_card": {
+      "title": "Animaciones"
+    },
+    "backface_card_style_field": {
+      "button_title": "Elige este reversos de carta"
+    },
+    "backface_card_styles_feature_card": {
+      "title": "Reversos de carta personalizables"
+    },
+    "confirm_modal": {
+      "cancel_button_label": "Cancelar",
+      "confirm_button_label": "Confirmar",
+      "title": "¿Está seguro?"
+    },
+    "feedback_drawer": {
+      "contact_by_email_message": "También puedes contactar con nosotros por correo electrónico:",
+      "description": "¿Una idea para mejorar? ¿Un error que informarnos? Utilice el siguiente formulario para compartir sus comentarios con nosotros.",
+      "from_input": {
+        "helper_text": "Necesario si desea recibir una respuesta nuestra",
+        "label": "Email"
+      },
+      "message_textarea": {
+        "label": "Mensaje",
+        "placeholder": "Una idea para una característica, un error, etc."
+      },
+      "submit_button_label": "Compartir mis comentarios",
+      "success_message": "Sus comentarios han sido compartidos con nosotros. Gracias 😊"
+    },
+    "multi_step_form": {
+      "next_step_button_label": "Continuar",
+      "submit_button_label": "Validar"
+    },
+    "nudge_sending_feature_card": {
+      "title": "Envío de toques"
+    },
+    "user_dropdown_content": {
+      "user_edit_drawer_toggle_button_label": "Mis datos",
+      "user_voting_rooms_drawer_toggle_button_label": "Mis sesiones"
+    },
+    "user_edit_drawer": {
+      "submit_button_label": "Actualizar",
+      "success_message": "Sus datos han sido modificados correctamente",
+      "title": "Mis datos"
+    },
+    "user_voting_room_drawer": {
+      "empty_state_description": "Aún no ha participado en ninguna sesión.<br />Vuelva más tarde.",
+      "empty_state_title": "Sin sesiones",
+      "expiration_message": "Las sesiones caducan automáticamente tras una semana de inactividad.",
+      "title": "Mis sesiones"
+    },
+    "voting_room_card": {
+      "created_by": "creada por",
+      "me": "mí"
+    },
+    "voting_room_creation_drawer": {
+      "default_voting_room_name": "Sesión del {{today_date}}",
+      "error_message": "No se pudo crear la sesión",
+      "submit_button_label": "Crear sesión"
+    },
+    "voting_room_edition_drawer": {
+      "submit_button_label": "Actualizar",
+      "success_message": "Sesión modificada correctamente"
+    },
+    "voting_room_joining_drawer": {
+      "error_message": "Error al acceder a la sesión"
+    },
+    "voting_room_table": {
+      "empty_voting_room_state": {
+        "description": "Esperando a sus compañeros...",
+        "title": "¡Estimar es más divertido en equipo!"
+      }
+    }
+  },
+  "entities": {
+    "feedback": {
+      "actions": {
+        "share_feedback": "Compartir comentarios"
+      },
+      "label": "Feedback"
+    },
+    "nudge": {
+      "actions": {
+        "send_nudge": "Enviar un toque"
+      }
+    },
+    "profile": {
+      "props": {
+        "backface_card_style": "Reverso de la carta",
+        "company_name": "Empresa",
+        "display_name": "Nombre / Apodo"
+      }
+    },
+    "voting_room": {
+      "actions": {
+        "create_a_voting_room": "Iniciar una sesión",
+        "join_voting_room": "Unirse a la sesión",
+        "leave_voting_room": "Salir de la sesión",
+        "reveal_votes": "Mostrar votos",
+        "start_new_voting_round": "Iniciar nueva votación"
+      },
+      "edition": {
+        "title": "Ajustes de la sesión"
+      },
+      "invitation": {
+        "qr_code": "Código QR de invitación",
+        "qr_code_caption": "Escanear para unirse",
+        "qr_code_required": "Código de invitación obligatorio",
+        "see_qr_code_button_label": "Ver código QR de invitación",
+        "voting_room_url_copied_message": "Enlace de invitación copiado",
+        "voting_room_url_copy_button_label": "Copiar enlace de invitación"
+      },
+      "label": "Sesión",
+      "props": {
+        "name": "Nombre de la sesión",
+        "voting_system": "Sistema de votación"
+      }
+    }
+  },
+  "hooks": {
+    "use_static_page_content": {
+      "error_message": "No se pudo cargar la traducción {{language}} de esta página"
+    },
+    "use_voting_room_leaving": {
+      "confirm_modal": {
+        "description": "Podrá volver a unirse más tarde si dispone del enlace para compartir.",
+        "title": "¿Está seguro de que desea salir de la sesión?"
+      }
+    }
+  },
+  "layouts": {
+    "main_layout": {
+      "footer": {
+        "contribute_on_github_button_label": "Contribuir en GitHub",
+        "description": "Si desea apoyar este proyecto, puede contribuir al código fuente o invitarme a un café. Se lo agradeceré mucho.",
+        "legal_notices": "Aviso legal",
+        "made_with": "Hecho con",
+        "title": "Apoyar este proyecto"
+      }
+    }
+  },
+  "pages": {
+    "error_page": {
+      "error_message_tooltip": "Detalles del error:\n\n{{detailedErrorMessage}}pages.error_page.error_message_tooltip",
+      "retry_button_label": "Reintentar",
+      "title": "Ha ocurrido un error"
+    },
+    "front_page": {
+      "context_section": {
+        "paragraph": "La idea de {{app_name}} nació de una observación personal. Como desarrollador front-end en un equipo ágil, no encontraba ninguna aplicación de planning poker que fuera elegante, gratuita y sin publicidad. Pensé que sería un buen <strong>side project</strong>. Así que me lancé a esta aventura sin ningún objetivo financiero, simplemente por placer.",
+        "subtitle": "Palabras del creador",
+        "title": "Un poco de contexto"
+      },
+      "cta_section": {
+        "title": "¿Convencido?"
+      },
+      "featured_section": {
+        "free_feature_card": {
+          "description": "La aplicación es totalmente gratuita, sin límite de sesiones ni de votos.",
+          "title": "Gratis"
+        },
+        "no_ad_feature_card": {
+          "description": "Ningún anuncio interrumpirá su experiencia de planificación de equipo.",
+          "title": "Sin publicidad"
+        },
+        "no_registration_feature_card": {
+          "description": "No se requiere registro para utilizar todas las funciones.",
+          "title": "Sin registro"
+        }
+      },
+      "features_section": {
+        "title": "¿Cómo se ve?"
+      },
+      "hero_section": {
+        "title": "Sus estimaciones,<br />sin fricción"
+      },
+      "how_it_works_section": {
+        "paragraph": "El Planning poker, también llamado Scrum poker, es una <strong>técnica de estimación colaborativa</strong> utilizada por equipos ágiles. Cada miembro del equipo elige en secreto una carta que representa su estimación del esfuerzo requerido para una tarea. Una vez que todos han votado, las cartas se revelan simultáneamente para facilitar el debate y alcanzar un consenso.",
+        "subtitle": "El concepto",
+        "title": "¿Cómo funciona?"
+      },
+      "why_choose_us_section": {
+        "comparison_points": {
+          "advanced_features": "Funciones avanzadas",
+          "immersive_ui": "Interfaz inmersiva",
+          "no_ad": "Sin publicidad",
+          "open_source": "Código abierto",
+          "unlimited_and free": "Ilimitado y gratis"
+        },
+        "concurrent_logo_alt": "Logo de {{concurrent_name}}",
+        "sub_subtitle": "¿Cómo se posiciona {{app_name}} frente a otras aplicaciones de Planning poker en línea?",
+        "subtitle": "La comparativa",
+        "title": "¿Por qué elegir {{app_name}}?"
+      },
+      "why_use_it_section": {
+        "paragraph": "El Planning poker permite <strong>evitar el sesgo de anclaje</strong>, donde la opinión de una persona influye en las demás. Al revelar las estimaciones simultáneamente, cada miembro comparte su punto de vista de forma independiente. Esto{\" \"} <strong>favorece discusiones constructivas</strong> y da como resultado estimaciones más precisas y consensuadas.",
+        "subtitle": "Los beneficios",
+        "title": "¿Por qué utilizarlo?"
+      }
+    },
+    "legal_notice": {
+      "title": "Aviso Legal"
+    },
+    "not_found_page": {
+      "title": "Página no encontrada"
+    },
+    "voting_room_page": {
+      "invite_dropdown": {
+        "trigger_button_label": "Invitar"
+      },
+      "notifications": {
+        "name_changed_message": "{{user_display_name}} ha cambiado el nombre de la sesión a: {{new_name}}",
+        "new_voting_round_started_message": "{{user_display_name}} ha iniciado una nueva votación",
+        "votes_revealed_message": "{{user_display_name}} ha mostrado los votos",
+        "voting_system_changed_message": "{{user_display_name}} ha cambiado el sistema de votación a: {{voting_system_label}}"
+      },
+      "nudge_received_message": "Ha recibido un toque de {{user_display_name}}",
+      "voting_room_joining_confirm_modal": {
+        "cancel_button_label": "No, quedarme como espectador",
+        "confirm_button_label": "Sí, unirme a la sesión",
+        "description": "¿Desea unirse a la sesión?",
+        "title": "Unirse a la sesión"
+      }
+    }
+  },
+  "providers": {
+    "auth": {
+      "sign_in_error_message": "Error en el inicio de sesión anónimo",
+      "user_not_found_error_message": "Usuario no encontrado"
+    }
+  },
+  "services": {
+    "feedback": {
+      "feedback_sent_error_message": "Comentarios no se pueden enviar"
+    },
+    "nudge": {
+      "nudge_sent_error_message": "No se pudo enviar el toque"
+    },
+    "participant": {
+      "participants_not_found_error_message": "Participantes no encontrados",
+      "vote_update_error_message": "No se pudo actualizar el voto",
+      "voting_room_joining_error_message": "No se pudo unir a la sesión",
+      "voting_room_leaving_error_message": "No se pudo salir de la sesión"
+    },
+    "profile": {
+      "profile_not_found_error_message": "Perfil de usuario no encontrado",
+      "profile_update_error_message": "No se pudo actualizar el usuario",
+      "profiles_not_found_error_message": "Perfiles de usuario no encontrados"
+    },
+    "voting_room": {
+      "new_voting_round_start_error_message": "No se pudo iniciar una nueva votación",
+      "votes_reveal_error_message": "No se pudieron mostrar los votos",
+      "voting_room_creation_error_message": "No se pudo crear la sesión",
+      "voting_room_not_found_error_message": "Sesión no encontrada",
+      "voting_room_update_error_message": "No se pudo actualizar la sesión",
+      "voting_rooms_not_found_error_message": "Sesiones no encontradas"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+import classNames from "classnames";
+
+import type { ButtonSkeletonProps } from "./types";
+
+export const ButtonSkeleton = ({ size = "base" }: ButtonSkeletonProps) => {
+  return (
+    <div
+      className={classNames(
+        "skeleton w-40",
+        {
+          "rounded-2xl": size === "lg",
+          "rounded-lg": size === "sm",
+          "rounded-xl": size === "base",
+        },
+        {
+          "h-8": size === "sm",
+          "h-11": size === "base",
+          "h-14": size === "lg",
+        },
+      )}
+    ></div>
+  );
+};

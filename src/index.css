@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Animations */
+  --animate-click-ping: click-ping 500ms ease-in-out;
+  --animate-flying-up: flying-up 1.5s ease-in-out;
+  --animate-scrolling: scrolling 20000ms linear infinite;
+  --animate-shake: shake 300ms ease-in-out;
+  --animate-wizz: wizz 300ms ease-in-out;
+
+  /* Breakpoints */
+  --breakpoint-xs: 30rem;
+
+  /* Colors */
+  --color-lemon-50: oklch(0.991 0.014 106.58);
+  --color-lemon-100: oklch(0.981 0.034 106.97);
+  --color-lemon-200: oklch(0.954 0.085 107.9);
+  --color-lemon-300: oklch(0.927 0.132 108.71);
+  --color-lemon-400: oklch(0.905 0.166 109.29);
+  --color-lemon-500: oklch(0.884 0.186 109.67);
+  --color-lemon-600: oklch(0.746 0.158 109.67);
+  --color-lemon-700: oklch(0.604 0.127 109.65);
+  --color-lemon-800: oklch(0.438 0.091 110.43);
+  --color-lemon-900: oklch(0.271 0.054 111.04);
+  --color-lemon-950: oklch(0.158 0.028 112.59);
+
+  /* Container sizes */
+  --container-8xl: 96rem;
+
+  /* Fonts */
+  --font-dm-sans: "DM Sans", sans-serif;
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+
+  /* Shadows */
+  --shadow-flat: 3px 3px 0 rgba(0, 0, 0, 1);
+
+  @keyframes click-ping {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes flying-up {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(var(--x-translation, 0), -6rem);
+    }
+  }
+
+  @keyframes scrolling {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: rotate(-5deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+  }
+
+  @keyframes wizz {
+    5% {
+      transform: translate(0.5rem, 0.5rem);
+    }
+    10% {
+      transform: translateY(-0.5rem);
+    }
+    15% {
+      transform: translate(0, 0.5rem);
+    }
+    20% {
+      transform: translate(-0.5rem, 0.5rem);
+    }
+    25% {
+      transform: translate(-0.5rem, -0.5rem);
+    }
+    30% {
+      transform: translate(0.5rem, 0.5rem);
+    }
+    35% {
+      transform: translate(0.5rem, -0.5rem);
+    }
+    40% {
+      transform: translate(-0.25rem, 0.5rem);
+    }
+    45% {
+      transform: translate(-0.25rem, 0.25rem);
+    }
+    50% {
+      transform: translate(-0.25rem, 0);
+    }
+    55% {
+      transform: translate(-0.5rem, 0.25rem);
+    }
+    60% {
+      transform: translate(0.5rem, 0.25rem);
+    }
+    65% {
+      transform: translate(0);
+    }
+    70% {
+      transform: translate(0.5rem, -0.25rem);
+    }
+    75% {
+      transform: translate(0.25rem, -0.5rem);
+    }
+    80% {
+      transform: translateY(-0.5rem);
+    }
+    85% {
+      transform: translate(-0.5rem, 0.5rem);
+    }
+    90% {
+      transform: translate(0.5rem, 0);
+    }
+    95% {
+      transform: translate(-0.5rem, 0.5rem);
+    }
+    100% {
+      transform: translateY(0.5rem);
+    }
+  }
+}
+
+@utility centered-container {
+  @apply container m-auto max-w-7xl px-6;
+}
+
+@utility styled-h1 {
+  @apply font-space-grotesk text-3xl font-bold md:text-4xl;
+}
+
+@utility styled-h2 {
+  @apply font-space-grotesk text-2xl font-bold md:text-3xl;
+}
+
+@utility styled-h3 {
+  @apply font-space-grotesk text-xl font-bold md:text-2xl;
+}
+
+@utility border-pill {
+  @apply border-2 border-zinc-900 transition-all dark:border-zinc-600;
+}
+
+@utility shadow-pill {
+  @apply shadow-flat shadow-zinc-900 dark:shadow-zinc-600;
+}
+
+@utility overlay {
+  @apply bg-zinc-950/70;
+}
+
+@utility skeleton {
+  @apply animate-pulse bg-zinc-900/10 dark:bg-white/10;
+}
+
+@utility bg-dots {
+  background-image: radial-gradient(
+    oklch(from var(--color-zinc-950) l c h / 0.2) 1px,
+    transparent 0
+  );
+  background-size: calc(var(--spacing, 0.25rem) * 6)
+    calc(var(--spacing, 0.25rem) * 6);
+}
+
+@utility bg-dots-dark {
+  background-image: radial-gradient(
+    oklch(from var(--color-white) l c h / 0.15) 1px,
+    transparent 0
+  );
+  background-size: calc(var(--spacing, 0.25rem) * 6)
+    calc(var(--spacing, 0.25rem) * 6);
+}
+
+@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
+
+@utility prose {
+  @apply whitespace-pre-wrap;
+
+  h1 {
+    @apply styled-h1;
+  }
+
+  h2 {
+    @apply styled-h2;
+  }
+
+  ul {
+    @apply list-disc pl-8;
+  }
+
+  a {
+    @apply underline;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-lemon-100 bg-dots dark:bg-dots-dark font-dm-sans text-zinc-950 transition-colors dark:bg-zinc-900 dark:text-white;
+  }
+
+  dialog {
+    @apply text-zinc-900 dark:text-white;
+  }
+
+  p {
+    @apply md:leading-8;
+  }
+
+  button:not(:disabled) {
+    @apply cursor-pointer;
+  }
+
+  a:not(.default-style-none) {
+    @apply hover:underline;
+  }
+
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible,
+  a:focus-visible {
+    @apply ring-lemon-500 ring-2 ring-offset-3 ring-offset-white outline-none dark:ring-white dark:ring-offset-zinc-900;
+  }
+
+  button:focus-visible,
+  a:focus-visible {
+    @apply pointer-coarse:ring-transparent;
+  }
+
+  hr {
+    @apply text-gray-300 dark:text-gray-600/70;
+  }
+}

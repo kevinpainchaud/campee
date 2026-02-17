@@ -1,0 +1,64 @@
+@reference "../../index.css";
+
+.card-wrapper {
+  --rotate: calc(var(--index) * 1.5deg);
+  --translate-x: calc(var(--index) * 2rem);
+  --translate-x-min-lg: calc(var(--index) * 3rem);
+  --translate-x-min-2xl: calc(var(--index) * 3.25rem);
+  --translate-x-min-4xl: calc(var(--index) * 4.25rem);
+  --translate-x-min-6xl: calc(var(--index) * 5.5rem);
+  --translate-x-min-8xl: calc(var(--index) * 7rem);
+
+  transform: rotate(var(--rotate)) translateX(var(--translate-x));
+
+  @variant @min-lg {
+    transform: rotate(var(--rotate)) translateX(var(--translate-x-min-lg));
+  }
+
+  @variant @min-2xl {
+    transform: rotate(var(--rotate)) translateX(var(--translate-x-min-2xl));
+  }
+
+  @variant @min-4xl {
+    transform: rotate(var(--rotate)) translateX(var(--translate-x-min-4xl));
+  }
+
+  @variant @min-6xl {
+    transform: rotate(var(--rotate)) translateX(var(--translate-x-min-6xl));
+  }
+
+  @variant @min-8xl {
+    transform: rotate(var(--rotate)) translateX(var(--translate-x-min-8xl));
+  }
+}
+
+.card-wrapper--hovered,
+.card-wrapper--active {
+  transform: rotate(var(--rotate)) translateX(var(--translate-x))
+    translateY(-1rem);
+
+  @variant @min-lg {
+    transform: rotate(var(--rotate)) translateX(var(--translate-x-min-lg))
+      translateY(-1rem);
+  }
+
+  @variant @min-2xl {
+    transform: rotate(var(--rotate)) translateX(var(--translate-x-min-2xl))
+      translateY(-1rem);
+  }
+
+  @variant @min-4xl {
+    transform: rotate(var(--rotate)) translateX(var(--translate-x-min-4xl))
+      translateY(-1rem);
+  }
+
+  @variant @min-6xl {
+    transform: rotate(var(--rotate)) translateX(var(--translate-x-min-6xl))
+      translateY(-1rem);
+  }
+
+  @variant @min-8xl {
+    transform: rotate(var(--rotate)) translateX(var(--translate-x-min-8xl))
+      translateY(-1rem);
+  }
+}
