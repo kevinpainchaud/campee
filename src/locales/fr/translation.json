@@ -65,10 +65,10 @@
       "title": "Envoi de wizz"
     },
     "user_dropdown_content": {
-      "user_edit_drawer_toggle_button_label": "Mes informations",
+      "user_profile_edit_drawer_toggle_button_label": "Mes informations",
       "user_voting_rooms_drawer_toggle_button_label": "Mes sessions"
     },
-    "user_edit_drawer": {
+    "user_profile_edit_drawer": {
       "submit_button_label": "Mettre à jour",
       "success_message": "Vos informations ont bien été modifiée",
       "title": "Mes informations"
@@ -223,7 +223,7 @@
         "title": "Pourquoi choisir {{app_name}} ?"
       },
       "why_use_it_section": {
-        "paragraph": "Le Planning poker permet d'<strong>éviter les biais d'ancrage</strong> où l'opinion d'une personne influence les autres. En révélant les estimations simultanément, chaque membre partage son point de vue de manière indépendante. Cela{\" \"} <strong>favorise des discussions constructives</strong> et aboutit à des estimations plus précises et consensuelles.",
+        "paragraph": "Le Planning poker permet d'<strong>éviter les biais d'ancrage</strong> où l'opinion d'une personne influence les autres. En révélant les estimations simultanément, chaque membre partage son point de vue de manière indépendante. Cela <strong>favorise des discussions constructives</strong> et aboutit à des estimations plus précises et consensuelles.",
         "subtitle": "Les intérêts",
         "title": "Pourquoi l'utiliser ?"
       }

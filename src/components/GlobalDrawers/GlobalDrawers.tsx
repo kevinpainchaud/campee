@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import { useDrawer } from "../../hooks/useDrawer";
 import { FeedbackDrawer } from "../FeedbackDrawer/FeedbackDrawer";
 import { MainMenuDrawer } from "../MainMenuDrawer/MainMenuDrawer";
-import { UserEditDrawer } from "../UserEditDrawer/UserEditDrawer";
+import { UserProfileEditDrawer } from "../UserProfileEditDrawer/UserProfileEditDrawer";
 import { UserVotingRoomDrawer } from "../UserVotingRoomDrawer/UserVotingRoomDrawer";
 import { VotingRoomCreationDrawer } from "../VotingRoomCreationDrawer/VotingRoomCreationDrawer";
 
@@ -13,10 +13,10 @@ export const GlobalDrawers = () => {
     mainMenuDrawerOpen,
     setFeedbackDrawerOpen,
     setMainMenuDrawerOpen,
-    setUserEditDrawerOpen,
+    setUserProfileEditDrawerOpen,
     setUserVotingRoomsDrawerOpen,
     setVotingRoomCreationDrawerOpen,
-    userEditDrawerOpen,
+    userProfileEditDrawerOpen,
     userVotingRoomsDrawerOpen,
     votingRoomCreationDrawerOpen,
   } = useDrawer();
@@ -31,9 +31,9 @@ export const GlobalDrawers = () => {
         open={mainMenuDrawerOpen}
         setOpen={setMainMenuDrawerOpen}
       />
-      <UserEditDrawer
-        open={userEditDrawerOpen}
-        setOpen={setUserEditDrawerOpen}
+      <UserProfileEditDrawer
+        open={userProfileEditDrawerOpen}
+        setOpen={setUserProfileEditDrawerOpen}
       />
       <UserVotingRoomDrawer
         open={userVotingRoomsDrawerOpen}

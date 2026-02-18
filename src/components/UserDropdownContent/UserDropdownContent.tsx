@@ -13,7 +13,8 @@ export const UserDropdownContent = ({
   additionalDropdownMenuItems,
   onDropdownMenuItemClick,
 }: UserDropdownContentProps) => {
-  const { setUserEditDrawerOpen, setUserVotingRoomsDrawerOpen } = useDrawer();
+  const { setUserProfileEditDrawerOpen, setUserVotingRoomsDrawerOpen } =
+    useDrawer();
   const { t } = useTranslation();
   const { track } = useTracking();
 
@@ -23,9 +24,12 @@ export const UserDropdownContent = ({
         {
           icon: PiPencilSimpleBold,
           label: t(
-            "components.user_dropdown_content.user_edit_drawer_toggle_button_label",
+            "components.user_dropdown_content.user_profile_edit_drawer_toggle_button_label",
           ),
-          onClick: () => setUserEditDrawerOpen(true),
+          onClick: () => {
+            setUserProfileEditDrawerOpen(true);
+            track("click_user_profile_edit_drawer_trigger_button");
+          },
           tagElement: "button",
         },
         {

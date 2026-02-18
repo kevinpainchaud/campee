@@ -7,7 +7,8 @@ export const DrawerProvider = ({ children }: { children: React.ReactNode }) => {
   const [mainMenuDrawerOpen, setMainMenuDrawerOpen] = useState(false);
   const [votingRoomCreationDrawerOpen, setVotingRoomCreationDrawerOpen] =
     useState(false);
-  const [userEditDrawerOpen, setUserEditDrawerOpen] = useState(false);
+  const [userProfileEditDrawerOpen, setUserProfileEditDrawerOpen] =
+    useState(false);
   const [userVotingRoomsDrawerOpen, setUserVotingRoomsDrawerOpen] =
     useState(false);
 
@@ -18,10 +19,10 @@ export const DrawerProvider = ({ children }: { children: React.ReactNode }) => {
         mainMenuDrawerOpen,
         setFeedbackDrawerOpen,
         setMainMenuDrawerOpen,
-        setUserEditDrawerOpen,
+        setUserProfileEditDrawerOpen,
         setUserVotingRoomsDrawerOpen,
         setVotingRoomCreationDrawerOpen,
-        userEditDrawerOpen,
+        userProfileEditDrawerOpen,
         userVotingRoomsDrawerOpen,
         votingRoomCreationDrawerOpen,
       }}

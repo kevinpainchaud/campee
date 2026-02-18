@@ -65,10 +65,10 @@
       "title": "Envío de toques"
     },
     "user_dropdown_content": {
-      "user_edit_drawer_toggle_button_label": "Mis datos",
+      "user_profile_edit_drawer_toggle_button_label": "Mis datos",
       "user_voting_rooms_drawer_toggle_button_label": "Mis sesiones"
     },
-    "user_edit_drawer": {
+    "user_profile_edit_drawer": {
       "submit_button_label": "Actualizar",
       "success_message": "Sus datos han sido modificados correctamente",
       "title": "Mis datos"
@@ -223,7 +223,7 @@
         "title": "¿Por qué elegir {{app_name}}?"
       },
       "why_use_it_section": {
-        "paragraph": "El Planning poker permite <strong>evitar el sesgo de anclaje</strong>, donde la opinión de una persona influye en las demás. Al revelar las estimaciones simultáneamente, cada miembro comparte su punto de vista de forma independiente. Esto{\" \"} <strong>favorece discusiones constructivas</strong> y da como resultado estimaciones más precisas y consensuadas.",
+        "paragraph": "El Planning poker permite <strong>evitar el sesgo de anclaje</strong>, donde la opinión de una persona influye en las demás. Al revelar las estimaciones simultáneamente, cada miembro comparte su punto de vista de forma independiente. Esto <strong>favorece discusiones constructivas</strong> y da como resultado estimaciones más precisas y consensuadas.",
         "subtitle": "Los beneficios",
         "title": "¿Por qué utilizarlo?"
       }

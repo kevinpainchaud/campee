@@ -5,6 +5,7 @@ import { Form } from "react-final-form";
 import { useTranslation } from "react-i18next";
 
 import { VotingRoomContext } from "../../context/VotingRoomContext";
+import { useTracking } from "../../hooks/useTracking";
 import { useVotingRoomFieldsValidation } from "../../hooks/useVotingRoomFieldsValidation";
 import { useVotingRoomUpdateMutation } from "../../mutations/useVotingRoomUpdateMutation";
 import type { VotingRoomFormValues } from "../../types/votingRoomFormValues";
@@ -21,6 +22,7 @@ export const VotingRoomEditionDrawer = ({
 
   const { validate } = useVotingRoomFieldsValidation();
   const { enqueueSnackbar } = useSnackbar();
+  const { track } = useTracking();
   const { t } = useTranslation();
 
   const {
@@ -54,8 +56,10 @@ export const VotingRoomEditionDrawer = ({
           voting_system: values.votingSystem,
         },
       });
+
+      track("update_voting_room");
     },
-    [votingRoom, updateVotingRoom],
+    [votingRoom, updateVotingRoom, track],
   );
 
   useEffect(() => {

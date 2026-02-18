@@ -65,10 +65,10 @@
       "title": "Send nudges"
     },
     "user_dropdown_content": {
-      "user_edit_drawer_toggle_button_label": "My information",
+      "user_profile_edit_drawer_toggle_button_label": "My information",
       "user_voting_rooms_drawer_toggle_button_label": "My sessions"
     },
-    "user_edit_drawer": {
+    "user_profile_edit_drawer": {
       "submit_button_label": "Update",
       "success_message": "Your information has been updated",
       "title": "My information"
@@ -223,7 +223,7 @@
         "title": "Why choose {{app_name}}?"
       },
       "why_use_it_section": {
-        "paragraph": "Planning poker helps <strong>avoid anchoring bias</strong> where one person's opinion influences others. By revealing estimates simultaneously, each member shares their perspective independently. This{\" \"} <strong>fosters constructive discussions</strong> and leads to more accurate and consensual estimates.",
+        "paragraph": "Planning poker helps <strong>avoid anchoring bias</strong> where one person's opinion influences others. By revealing estimates simultaneously, each member shares their perspective independently. This <strong>fosters constructive discussions</strong> and leads to more accurate and consensual estimates.",
         "subtitle": "The benefits",
         "title": "Why use it?"
       }

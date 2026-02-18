@@ -6,10 +6,13 @@ export type TrackingEventName =
   | "click_qr_code_button"
   | "click_voting_room_creation_button"
   | "click_voting_room_joining_button"
+  | "click_user_profile_edit_drawer_trigger_button"
   | "click_user_voting_rooms_drawer_trigger_button"
   | "create_voting_room"
   | "reveal_votes"
   | "send_nudge"
   | "sign_up"
   | "start_new_voting_round"
+  | "update_user_profile"
+  | "update_voting_room"
   | "vote";
