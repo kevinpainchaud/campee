@@ -16,8 +16,8 @@ export const FeaturedCard = ({
         className,
         "border-pill shadow-pill flex flex-col gap-2 rounded-2xl p-8 md:p-12",
         {
-          "bg-white dark:bg-zinc-900": !active,
-          "bg-zinc-900 text-white dark:bg-zinc-600": active,
+          "bg-lemon-50 dark:bg-zinc-900": !active,
+          "text-lemon-50 bg-zinc-900 dark:bg-zinc-600": active,
         },
       )}
     >

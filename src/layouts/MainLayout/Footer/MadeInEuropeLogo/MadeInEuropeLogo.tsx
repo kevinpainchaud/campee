@@ -5,7 +5,7 @@ import type { MadeInEuropeLogoProps } from "./types";
 export const MadeInEuropeLogo = ({ className }: MadeInEuropeLogoProps) => {
   return (
     <svg
-      className={classNames(className, "fill-white")}
+      className={classNames(className, "fill-lemon-50")}
       viewBox="0 0 150 64"
       xmlns="http://www.w3.org/2000/svg"
     >

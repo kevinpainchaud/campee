@@ -2,6 +2,7 @@ import classNames from "classnames";
 import { useTranslation } from "react-i18next";
 import { PiChatTeardropTextBold } from "react-icons/pi";
 
+import { Button } from "../../../components/Button/Button";
 import { useDrawer } from "../../../hooks/useDrawer";
 import type { FeedbackButtonProps } from "./types";
 
@@ -10,10 +11,23 @@ export const FeedbackButton = ({ className }: FeedbackButtonProps) => {
   const { t } = useTranslation();
 
   return (
+    <Button
+      className={className}
+      leftIcon={PiChatTeardropTextBold}
+      onClick={() => setFeedbackDrawerOpen(true)}
+      tagElement="button"
+      title={t("entities.feedback.actions.share_feedback")}
+      variant="outline"
+    >
+      {/* {t("entities.feedback.label")} */}
+    </Button>
+  );
+
+  return (
     <button
       className={classNames(
         className,
-        "border-pill hover:shadow-pill flex -translate-x-4 flex-col items-center gap-1 rounded-xl border-l-0 bg-white p-2 pl-6 hover:-translate-x-3 dark:bg-zinc-900",
+        "border-pill hover:shadow-pill bg-lemon-50 flex items-center gap-1 rounded-full p-2 dark:bg-zinc-900",
       )}
       onClick={() => setFeedbackDrawerOpen(true)}
       title={t("entities.feedback.actions.share_feedback")}

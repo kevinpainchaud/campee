@@ -17,6 +17,7 @@ export const QrCodeDrawer = ({
     <Drawer open={open} setOpen={setOpen} title={title}>
       <div className="flex flex-col items-center gap-4 pt-12">
         <QRCodeSVG
+          bgColor="#fcfcf5"
           className="size-56"
           imageSettings={{
             excavate: true,

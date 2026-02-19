@@ -45,7 +45,11 @@ export const InviteDropdown = () => {
             />
             <hr />
             <div className="flex gap-4 p-3">
-              <QRCodeSVG className="size-16" value={votingRoomUrl} />
+              <QRCodeSVG
+                bgColor="#fcfcf5"
+                className="size-16"
+                value={votingRoomUrl}
+              />
               <div className="flex grow items-center">
                 {t("entities.voting_room.invitation.qr_code_caption")}
               </div>

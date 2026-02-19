@@ -17,8 +17,8 @@ export const WhyChooseUsSection = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="relative border-t-2 border-b-4 border-zinc-900 bg-white py-12 md:px-6 md:py-20 dark:border-zinc-600 dark:bg-zinc-900">
-      <Tag className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-4">
+    <div className="bg-lemon-50 relative border-t-2 border-b-4 border-zinc-900 py-12 md:px-6 md:py-20 dark:border-zinc-600 dark:bg-zinc-900">
+      <Tag className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
         {t("pages.front_page.why_choose_us_section.subtitle")}
       </Tag>
       <div className="centered-container flex flex-col gap-8 md:gap-14">
@@ -195,7 +195,7 @@ export const WhyChooseUsSection = () => {
                 </tr>
               </tbody>
             </table>
-            <div className="absolute top-0 right-0 h-full w-10 bg-linear-to-r from-transparent to-white md:hidden dark:to-zinc-900"></div>
+            <div className="to-lemon-50 absolute top-0 right-0 h-full w-10 bg-linear-to-r from-transparent md:hidden dark:to-zinc-900"></div>
           </div>
         </div>
       </div>

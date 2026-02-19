@@ -2,7 +2,7 @@ import type { HTMLAttributes } from "react";
 
 export type ShowcaseItemProps = Pick<
   HTMLAttributes<HTMLDivElement>,
-  "children" | "className"
+  "children"
 > & {
   illustration: React.ReactNode;
   layout?: "illustrationLeft" | "illustrationRight";

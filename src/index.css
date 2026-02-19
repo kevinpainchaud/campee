@@ -16,7 +16,7 @@
   --breakpoint-xs: 30rem;
 
   /* Colors */
-  --color-lemon-50: oklch(0.991 0.014 106.58);
+  --color-lemon-50: oklch(0.989 0.009 106.76);
   --color-lemon-100: oklch(0.981 0.034 106.97);
   --color-lemon-200: oklch(0.954 0.085 107.9);
   --color-lemon-300: oklch(0.927 0.132 108.71);
@@ -178,7 +178,7 @@
 }
 
 @utility skeleton {
-  @apply animate-pulse bg-zinc-900/10 dark:bg-white/10;
+  @apply dark:bg-lemon-50/10 animate-pulse bg-zinc-900/10;
 }
 
 @utility bg-dots {
@@ -192,7 +192,7 @@
 
 @utility bg-dots-dark {
   background-image: radial-gradient(
-    oklch(from var(--color-white) l c h / 0.15) 1px,
+    oklch(from var(--color-lemon-50) l c h / 0.15) 1px,
     transparent 0
   );
   background-size: calc(var(--spacing, 0.25rem) * 6)
@@ -225,11 +225,11 @@
 
 @layer base {
   body {
-    @apply bg-lemon-100 bg-dots dark:bg-dots-dark font-dm-sans text-zinc-950 transition-colors dark:bg-zinc-900 dark:text-white;
+    @apply bg-lemon-100 bg-dots dark:bg-dots-dark font-dm-sans dark:text-lemon-50 text-zinc-950 transition-colors dark:bg-zinc-900;
   }
 
   dialog {
-    @apply text-zinc-900 dark:text-white;
+    @apply dark:text-lemon-50 text-zinc-900;
   }
 
   p {

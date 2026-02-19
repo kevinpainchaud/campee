@@ -19,7 +19,7 @@
 }
 
 .comparative-table tbody tr:not(:last-child) {
-  @apply border-b border-b-black/20 dark:border-b-white/20;
+  @apply border-b border-b-black/20 dark:border-b-lemon-50/20;
 }
 
 .comparative-table tbody th {

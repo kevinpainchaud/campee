@@ -14,7 +14,7 @@ export const Avatar = ({
       className={classNames(
         className,
         "flex items-center justify-center rounded-full leading-0 font-semibold uppercase",
-        "bg-zinc-900 text-white dark:bg-white dark:text-zinc-900",
+        "dark:bg-lemon-50 text-lemon-50 bg-zinc-900 dark:text-zinc-900",
         {
           "size-4 text-[10px]": size === "xs",
           "size-6 text-xs": size === "sm",

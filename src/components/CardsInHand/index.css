@@ -4,7 +4,7 @@
   --rotate: calc(var(--index) * 1.5deg);
   --translate-x: calc(var(--index) * 2rem);
   --translate-x-min-lg: calc(var(--index) * 3rem);
-  --translate-x-min-2xl: calc(var(--index) * 3.25rem);
+  --translate-x-min-2xl: calc(var(--index) * 3.75rem);
   --translate-x-min-4xl: calc(var(--index) * 4.25rem);
   --translate-x-min-6xl: calc(var(--index) * 5.5rem);
   --translate-x-min-8xl: calc(var(--index) * 7rem);

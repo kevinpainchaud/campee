@@ -3,21 +3,20 @@ import { useTranslation } from "react-i18next";
 import { AnimationsFeatureCard } from "../../../components/AnimationsFeatureCard/AnimationsFeatureCard";
 import { BackfaceCardStylesFeatureCard } from "../../../components/BackfaceCardStylesFeatureCard/BackfaceCardStylesFeatureCard";
 import { NudgeSendingFeatureCard } from "../../../components/NudgeSendingFeatureCard/NudgeSendingFeatureCard";
-import type { FeaturesSectionProps } from "./types";
 
-export const FeaturesSection = ({ className }: FeaturesSectionProps) => {
+export const FeaturesSection = () => {
   const { t } = useTranslation();
 
   return (
-    <div className={className}>
-      <h2 className="styled-h2 mb-8 text-center md:mb-16">
+    <div>
+      <h2 className="styled-h2 mb-6 text-center md:mb-14">
         {t("pages.front_page.features_section.title")}
       </h2>
-      <div className="flex flex-col pb-4 lg:flex-row lg:*:w-1/2">
-        <BackfaceCardStylesFeatureCard className="rotate-2" />
-        <div className="flex flex-col lg:flex-row lg:*:w-1/2">
-          <NudgeSendingFeatureCard className="-rotate-2" />
-          <AnimationsFeatureCard className="rotate-2" />
+      <div className="flex flex-col gap-4 md:gap-6 lg:flex-row lg:*:w-1/2">
+        <BackfaceCardStylesFeatureCard />
+        <div className="flex flex-col gap-4 md:gap-6 lg:flex-row lg:*:w-1/2">
+          <NudgeSendingFeatureCard />
+          <AnimationsFeatureCard />
         </div>
       </div>
     </div>

@@ -29,7 +29,7 @@ export const CardsInHand = ({
           className={classNames(
             "card-wrapper",
             "absolute bottom-0 duration-100",
-            "@8xl:w-36 w-12 @lg:w-16 @2xl:w-18 @4xl:w-22 @6xl:w-28",
+            "@8xl:w-36 w-12 @lg:w-16 @2xl:w-22 @6xl:w-28",
             {
               "card-wrapper--active": voteValue === activeVoteValue,
               "card-wrapper--hovered": hoveredCardIndex === index,

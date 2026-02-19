@@ -76,7 +76,7 @@ export const VotingRoomTable = ({
             </div>
           )
         ) : undefined}
-        <FeedbackButton className="absolute top-1/2 left-0 hidden -translate-y-1/2 lg:flex" />
+        <FeedbackButton className="absolute top-1/2 left-4 hidden -translate-y-1/2 lg:left-6 lg:flex" />
       </main>
       <div className="sticky bottom-0">
         <div className="h-4 lg:h-14" ref={tableRef}>

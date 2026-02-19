@@ -2,14 +2,12 @@ import { Trans, useTranslation } from "react-i18next";
 
 import { ShowcaseItem } from "../../../components/ShowcaseItem/ShowcaseItem";
 import { Illustration } from "./Illustration/Illustration";
-import type { WhyUseItSectionProps } from "./types";
 
-export const WhyUseItSection = ({ className }: WhyUseItSectionProps) => {
+export const WhyUseItSection = () => {
   const { t } = useTranslation();
 
   return (
     <ShowcaseItem
-      className={className}
       illustration={<Illustration />}
       layout="illustrationLeft"
       tagContent={t("pages.front_page.why_use_it_section.subtitle")}

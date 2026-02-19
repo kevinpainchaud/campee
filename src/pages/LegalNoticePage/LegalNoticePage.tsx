@@ -23,7 +23,7 @@ export const LegalNoticePage = () => {
       <Helmet>
         <title>{getTitleTagContent(t("pages.legal_notice.title"))}</title>
       </Helmet>
-      <div className="centered-container prose max-w-3xl">
+      <div className="centered-container prose max-w-4xl">
         <ReactMarkdown>{markdownContent}</ReactMarkdown>
       </div>
     </>

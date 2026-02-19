@@ -7,7 +7,7 @@ export const MainLayout = () => {
   return (
     <div className="pt-4 md:pt-6">
       <Header className="sticky top-4 z-40 lg:top-6" />
-      <main className="py-10 md:py-18">
+      <main className="py-16 md:py-26">
         <Outlet />
       </main>
       <Footer />

@@ -6,7 +6,7 @@ const meta = {
   args: {},
   component: Demo,
   render: () => (
-    <div className="border-pill shadow-pill aspect-12/8 h-[450px] max-w-full overflow-hidden rounded-xl *:h-full">
+    <div className="border-pill shadow-pill aspect-12/8 max-w-4xl overflow-hidden rounded-xl *:h-full">
       <Demo />
     </div>
   ),

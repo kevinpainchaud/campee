@@ -50,7 +50,7 @@ export const BackfaceCardStyleField = ({
               />
               <div
                 className={classNames(
-                  "border-pill shadow-pill absolute top-1/2 left-1/2 flex size-10 -translate-1/2 items-center justify-center rounded-full bg-white",
+                  "border-pill shadow-pill bg-lemon-50 absolute top-1/2 left-1/2 flex size-10 -translate-1/2 items-center justify-center rounded-full",
                   { hidden: backfaceCardStyleKey !== field.input.value },
                 )}
                 inert

@@ -17,9 +17,9 @@ export const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-zinc-900 text-white dark:bg-zinc-950">
+    <footer className="text-lemon-50 bg-zinc-900 dark:bg-zinc-950">
       <div className="centered-container md:px-6">
-        <div className="m-auto flex max-w-2xl flex-col gap-6 py-10 md:gap-12 md:py-28">
+        <div className="m-auto flex max-w-2xl flex-col gap-8 py-16 md:gap-16 md:py-26">
           <div className="flex flex-col items-center gap-3">
             <PiHandHeart className="text-5xl" />
             <h2 className="styled-h2">
@@ -53,7 +53,7 @@ export const Footer = () => {
             </a>
           </div>
         </div>
-        <hr className="border-white/10" />
+        <hr className="border-lemon-50/10" />
         <div className="flex flex-col gap-6 py-6 md:flex-row md:gap-12 md:py-12">
           <div className="flex grow flex-col items-center gap-6 md:flex-row md:gap-12">
             <Logo reversed={!darkThemeEnabled} showBeta />
@@ -62,7 +62,7 @@ export const Footer = () => {
               {t("layouts.main_layout.footer.legal_notices")}
             </Link>
           </div>
-          <div className="flex flex-col items-center gap-2 text-white/50 md:flex-row md:gap-12">
+          <div className="text-lemon-50/50 flex flex-col items-center gap-2 md:flex-row md:gap-12">
             <div>© Copyright {dayjs().year()}</div>
             <div className="flex items-center gap-2">
               <span>{t("layouts.main_layout.footer.made_with")}</span>

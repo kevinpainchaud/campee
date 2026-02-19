@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { useTranslation } from "react-i18next";
 
 import { FeatureCard } from "../FeatureCard/FeatureCard";
@@ -11,10 +12,13 @@ export const BackfaceCardStylesFeatureCard = ({
 
   return (
     <FeatureCard
-      className={className}
+      className={classNames(className, "overflow-hidden")}
       title={t("components.backface_card_styles_feature_card.title")}
     >
-      <div className="no-scrollbar flex overflow-x-auto pb-6" inert>
+      <div
+        className="no-scrollbar flex w-[110%] -translate-x-[5%] -rotate-2 overflow-x-auto pb-6"
+        inert
+      >
         <Group />
         <Group />
       </div>
