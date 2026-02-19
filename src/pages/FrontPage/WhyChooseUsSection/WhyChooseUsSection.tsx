@@ -195,7 +195,7 @@ export const WhyChooseUsSection = () => {
                 </tr>
               </tbody>
             </table>
-            <div className="to-lemon-50 absolute top-0 right-0 h-full w-10 bg-linear-to-r from-transparent md:hidden dark:to-zinc-950"></div>
+            <div className="to-lemon-50 absolute top-0 right-0 h-full w-10 bg-linear-to-r from-transparent md:hidden dark:to-zinc-900"></div>
           </div>
         </div>
       </div>
