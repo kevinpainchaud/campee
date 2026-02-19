@@ -1,9 +1,12 @@
 import classNames from "classnames";
 import { useContext, useMemo } from "react";
+import { useTranslation } from "react-i18next";
+import { PiChatTeardropTextBold } from "react-icons/pi";
 
 import { VotingRoomContext } from "../../context/VotingRoomContext";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
-import { FeedbackButton } from "../../pages/VotingRoomPage/FeedbackButton/FeedbackButton";
+import { useDrawer } from "../../hooks/useDrawer";
+import { Button } from "../Button/Button";
 import { Spinner } from "../Spinner/Spinner";
 import { UserSeat } from "../UserSeat/UserSeat";
 import { EmptyVotingRoomState } from "./EmptyVotingRoomState/EmptyVotingRoomState";
@@ -22,6 +25,8 @@ export const VotingRoomTable = ({
 
   const { breakpointMinLg, breakpointMinXl } = useBreakpoint();
   const { tablePath, tableRef } = useTablePath();
+  const { setFeedbackDrawerOpen } = useDrawer();
+  const { t } = useTranslation();
 
   const showParticipantsAsSeats = useMemo(() => {
     if (!peerParticipants) {
@@ -76,7 +81,15 @@ export const VotingRoomTable = ({
             </div>
           )
         ) : undefined}
-        <FeedbackButton className="absolute top-1/2 left-4 hidden -translate-y-1/2 lg:left-6 lg:flex" />
+        <div className="absolute top-1/2 left-4 hidden -translate-y-1/2 lg:left-6 lg:flex">
+          <Button
+            leftIcon={PiChatTeardropTextBold}
+            onClick={() => setFeedbackDrawerOpen(true)}
+            tagElement="button"
+            title={t("entities.feedback.actions.share_feedback")}
+            variant="outline"
+          ></Button>
+        </div>
       </main>
       <div className="sticky bottom-0">
         <div className="h-4 lg:h-14" ref={tableRef}>
