@@ -36,7 +36,7 @@ export const Modal = ({
       onClose={() => setOpen(false)}
       ref={ref}
     >
-      <div className="group-not-open/modal:animate-out group-not-open/modal:slide-out-to-bottom-20 group-not-open/modal:fade-out group-open/modal:animate-in group-open/modal:slide-in-from-bottom-20 group-open/modal:fade-in border-pill shadow-pill bg-lemon-50 fixed top-1/2 left-1/2 flex max-h-full w-full max-w-11/12 -translate-1/2 flex-col rounded-xl duration-200 md:w-xl md:max-w-none md:rounded-3xl dark:bg-zinc-900">
+      <div className="group-not-open/modal:animate-out group-not-open/modal:slide-out-to-bottom-20 group-not-open/modal:fade-out group-open/modal:animate-in group-open/modal:slide-in-from-bottom-20 group-open/modal:fade-in border-pill shadow-pill bg-lemon-50 fixed top-1/2 left-1/2 flex max-h-full w-full max-w-11/12 -translate-1/2 flex-col rounded-xl duration-200 md:w-xl md:max-w-none md:rounded-3xl dark:bg-zinc-950">
         <div className="flex items-center gap-4 p-6">
           <div className="grow font-semibold">{title}</div>
           <Button

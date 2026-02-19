@@ -75,7 +75,7 @@ export const Drawer = ({
       ></div>
       <div
         className={classNames(
-          "bg-lemon-50 fixed top-0 right-0 flex h-full w-full max-w-full flex-col duration-200 md:w-xl md:border-l-2 dark:border-l-zinc-600 dark:bg-zinc-900",
+          "bg-lemon-50 fixed top-0 right-0 flex h-full w-full max-w-full flex-col duration-200 md:w-xl md:border-l-2 dark:border-l-zinc-600 dark:bg-zinc-950",
           "group-not-open/drawer:animate-out group-not-open/drawer:slide-out-to-right-20 group-not-open/drawer:fade-out group-open/drawer:animate-in group-open/drawer:slide-in-from-right-20 group-open/drawer:fade-in",
         )}
       >

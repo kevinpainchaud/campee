@@ -16,14 +16,14 @@ export const VotingRoomCard = ({
 
   return (
     <Link
-      className="border-pill hover:shadow-pill default-style-none bg-lemon-50 flex items-center gap-2 rounded-xl p-4 dark:bg-zinc-900"
+      className="border-pill hover:shadow-pill default-style-none bg-lemon-50 flex items-center gap-2 rounded-xl p-4 dark:bg-zinc-950"
       onClick={onClick}
       to={generatePath(VOTING_ROOM_ROUTE_PATH, {
         invitation_code: votingRoom.invitation_code,
       })}
     >
       <div>
-        <div className="dark:bg-lemon-50 text-lemon-50 flex size-10 items-center justify-center rounded-full bg-zinc-900 dark:text-zinc-900">
+        <div className="dark:bg-lemon-50 text-lemon-50 flex size-10 items-center justify-center rounded-full bg-zinc-950 dark:text-zinc-950">
           <PiLinkBold size={20} />
         </div>
       </div>

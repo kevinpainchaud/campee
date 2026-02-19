@@ -8,7 +8,7 @@ export const ContextSection = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="border-pill shadow-pill bg-lemon-50 relative m-auto mt-4 flex max-w-4xl flex-col gap-4 rounded-2xl p-10 md:mt-0 md:translate-y-0 md:gap-7 md:p-14 dark:bg-zinc-900">
+    <div className="border-pill shadow-pill bg-lemon-50 relative m-auto mt-4 flex max-w-4xl flex-col gap-4 rounded-2xl p-10 md:mt-0 md:translate-y-0 md:gap-7 md:p-14 dark:bg-zinc-950">
       <Tag className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
         {t("pages.front_page.context_section.subtitle")}
       </Tag>

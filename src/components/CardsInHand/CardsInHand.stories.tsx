@@ -12,7 +12,7 @@ const meta = {
   },
   component: CardsInHand,
   render: (args) => (
-    <div className="border-pill bg-lemon-100 shadow-pill overflow-hidden rounded-xl pt-4 dark:bg-zinc-900">
+    <div className="border-pill bg-lemon-100 shadow-pill overflow-hidden rounded-xl pt-4 dark:bg-zinc-950">
       <CardsInHand {...args} />
     </div>
   ),

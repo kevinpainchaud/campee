@@ -22,7 +22,7 @@ export const SelectField = ({
           {...field.input}
           autoFocus={autoFocus}
           className={classNames(
-            "border-pill bg-lemon-50 col-start-1 row-start-1 appearance-none rounded-lg p-2 dark:bg-zinc-900",
+            "border-pill bg-lemon-50 col-start-1 row-start-1 appearance-none rounded-lg p-2 dark:bg-zinc-950",
             "disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-600",
           )}
           disabled={disabled}

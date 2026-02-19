@@ -89,7 +89,7 @@ export const Demo = () => {
 
   return (
     <div className="@container" inert>
-      <div className="bg-lemon-100 relative flex aspect-10/8 flex-col gap-6 overflow-clip pt-6 transition-colors select-none @sm:gap-8 @sm:pt-8 @lg:aspect-11/8 @xl:aspect-12/8 dark:bg-zinc-900">
+      <div className="bg-lemon-100 relative flex aspect-10/8 flex-col gap-6 overflow-clip pt-6 transition-colors select-none @sm:gap-8 @sm:pt-8 @lg:aspect-11/8 @xl:aspect-12/8 dark:bg-zinc-950">
         <div className="relative flex justify-center">
           <Button size="sm" tagElement="button" variant="primary">
             {votesRevealed

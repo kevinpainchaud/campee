@@ -166,24 +166,24 @@
 }
 
 @utility border-pill {
-  @apply border-2 border-zinc-900 transition-all dark:border-zinc-600;
+  @apply border-2 border-zinc-950 transition-all dark:border-zinc-600;
 }
 
 @utility shadow-pill {
-  @apply shadow-flat shadow-zinc-900 dark:shadow-zinc-600;
+  @apply shadow-flat shadow-zinc-950 dark:shadow-zinc-600;
 }
 
 @utility overlay {
-  @apply bg-zinc-900/70;
+  @apply bg-zinc-950/70;
 }
 
 @utility skeleton {
-  @apply dark:bg-lemon-50/10 animate-pulse bg-zinc-900/10;
+  @apply dark:bg-lemon-50/10 animate-pulse bg-zinc-950/10;
 }
 
 @utility bg-dots {
   background-image: radial-gradient(
-    oklch(from var(--color-zinc-900) l c h / 0.25) 1px,
+    oklch(from var(--color-zinc-950) l c h / 0.25) 1px,
     transparent 0
   );
   background-size: calc(var(--spacing, 0.25rem) * 6)
@@ -225,11 +225,11 @@
 
 @layer base {
   body {
-    @apply bg-lemon-100 bg-dots dark:bg-dots-dark font-dm-sans dark:text-lemon-50 text-zinc-900 transition-colors dark:bg-zinc-900;
+    @apply bg-lemon-100 bg-dots dark:bg-dots-dark font-dm-sans dark:text-lemon-50 text-zinc-950 transition-colors dark:bg-zinc-950;
   }
 
   dialog {
-    @apply dark:text-lemon-50 text-zinc-900;
+    @apply dark:text-lemon-50 text-zinc-950;
   }
 
   p {
@@ -249,7 +249,7 @@
   textarea:focus-visible,
   select:focus-visible,
   a:focus-visible {
-    @apply ring-lemon-500 ring-2 ring-offset-3 ring-offset-white outline-none dark:ring-white dark:ring-offset-zinc-900;
+    @apply ring-lemon-500 ring-2 ring-offset-3 ring-offset-white outline-none dark:ring-white dark:ring-offset-zinc-950;
   }
 
   button:focus-visible,

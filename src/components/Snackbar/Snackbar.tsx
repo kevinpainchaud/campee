@@ -33,7 +33,7 @@ export const Snackbar = forwardRef<HTMLDivElement, SnackbarProps>(
 
     return (
       <div
-        className="border-pill shadow-pill bg-lemon-50 flex w-full items-center gap-2 rounded-xl px-3 py-2 md:max-w-96 dark:bg-zinc-900"
+        className="border-pill shadow-pill bg-lemon-50 flex w-full items-center gap-2 rounded-xl px-3 py-2 md:max-w-96 dark:bg-zinc-950"
         ref={ref}
         role="alert"
         style={style}

@@ -8,14 +8,14 @@ export const Logo = ({ iconOnly, reversed, showBeta }: LogoProps) => {
   return (
     <div
       className={classNames("flex items-center gap-1 select-none", {
-        "dark:text-lemon-50 text-zinc-900": !reversed,
-        "text-lemon-50 dark:text-zinc-900": reversed,
+        "dark:text-lemon-50 text-zinc-950": !reversed,
+        "text-lemon-50 dark:text-zinc-950": reversed,
       })}
     >
       <div
         className={classNames("w-6 lg:w-7", {
-          "dark:fill-lemon-50 fill-zinc-900": !reversed,
-          "fill-lemon-50 dark:fill-zinc-900": reversed,
+          "dark:fill-lemon-50 fill-zinc-950": !reversed,
+          "fill-lemon-50 dark:fill-zinc-950": reversed,
         })}
       >
         <AppLogo />
