@@ -249,12 +249,12 @@
   textarea:focus-visible,
   select:focus-visible,
   a:focus-visible {
-    @apply ring-lemon-500 ring-2 ring-offset-3 ring-offset-white outline-none dark:ring-white dark:ring-offset-zinc-950;
+    @apply ring-lemon-500 dark:ring-lemon-50 ring-2 ring-offset-3 ring-offset-white outline-none dark:ring-offset-zinc-950;
   }
 
   button:focus-visible,
   a:focus-visible {
-    @apply pointer-coarse:ring-transparent!;
+    @apply pointer-coarse:ring-0 pointer-coarse:ring-offset-0;
   }
 
   hr {
