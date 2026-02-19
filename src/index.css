@@ -254,7 +254,7 @@
 
   button:focus-visible,
   a:focus-visible {
-    @apply pointer-coarse:ring-transparent;
+    @apply pointer-coarse:ring-transparent!;
   }
 
   hr {
