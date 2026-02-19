@@ -28,7 +28,7 @@ export const FlyingUpReaction = ({
     >
       <div className="flex flex-col items-center">
         <div className="text-3xl">{emoji}</div>
-        <div className="dark:bg-lemon-50 text-lemon-50 line-clamp-1 rounded-full bg-zinc-950 px-1 text-xs dark:text-zinc-950">
+        <div className="dark:bg-lemon-50 text-lemon-50 line-clamp-1 rounded-full bg-zinc-900 px-1 text-xs dark:text-zinc-950">
           {flyingUpReaction.fromName}
         </div>
       </div>

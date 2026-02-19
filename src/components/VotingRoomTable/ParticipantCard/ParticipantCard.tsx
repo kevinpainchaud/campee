@@ -100,7 +100,7 @@ export const ParticipantCard = ({ participant }: ParticipantCardProps) => {
                 )}
               >
                 <button
-                  className="border-pill hover:shadow-pill bg-lemon-50 size-14 cursor-pointer rounded-full text-2xl dark:bg-zinc-950"
+                  className="border-pill hover:shadow-pill bg-lemon-50 size-14 cursor-pointer rounded-full text-2xl dark:bg-zinc-900"
                   onClick={handleNudgeButtonClick}
                   title={t("entities.nudge.actions.send_nudge")}
                 >

@@ -17,7 +17,7 @@ export const WhyChooseUsSection = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="bg-lemon-50 relative border-t-2 border-b-4 border-zinc-950 py-12 md:px-6 md:py-20 dark:border-zinc-600 dark:bg-zinc-950">
+    <div className="bg-lemon-50 relative border-t-2 border-b-4 border-zinc-950 py-12 md:px-6 md:py-20 dark:border-zinc-600 dark:bg-zinc-900">
       <Tag className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
         {t("pages.front_page.why_choose_us_section.subtitle")}
       </Tag>

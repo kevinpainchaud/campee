@@ -5,7 +5,7 @@ import type { IllustrationProps } from "./types";
 export const Illustration = ({ className }: IllustrationProps) => {
   return (
     <svg
-      className={classNames(className, "dark:fill-lemon-50 fill-zinc-950")}
+      className={classNames(className, "dark:fill-lemon-50 fill-zinc-900")}
       version="1.0"
       viewBox="0 0 1024 1024"
       xmlns="http://www.w3.org/2000/svg"

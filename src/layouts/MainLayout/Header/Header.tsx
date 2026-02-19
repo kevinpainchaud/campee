@@ -16,7 +16,7 @@ export const Header = ({ className }: HeaderProps) => {
 
   return (
     <header className={classNames(className, "centered-container")}>
-      <div className="border-pill shadow-pill bg-lemon-50 flex items-center gap-6 rounded-full border-2 px-4 py-1 transition-colors md:px-8 lg:py-3 dark:bg-zinc-950">
+      <div className="border-pill shadow-pill bg-lemon-50 flex items-center gap-6 rounded-full border-2 px-4 py-1 transition-colors md:px-8 lg:py-3 dark:bg-zinc-900">
         <Link className="default-style-none" to="/">
           <Logo showBeta />
         </Link>

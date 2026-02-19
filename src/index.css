@@ -174,11 +174,11 @@
 }
 
 @utility overlay {
-  @apply bg-zinc-950/70;
+  @apply bg-zinc-900/70;
 }
 
 @utility skeleton {
-  @apply dark:bg-lemon-50/10 animate-pulse bg-zinc-950/10;
+  @apply dark:bg-lemon-50/10 animate-pulse bg-zinc-900/10;
 }
 
 @utility bg-dots {
@@ -225,7 +225,7 @@
 
 @layer base {
   body {
-    @apply bg-lemon-100 bg-dots dark:bg-dots-dark font-dm-sans dark:text-lemon-50 text-zinc-950 transition-colors dark:bg-zinc-950;
+    @apply bg-lemon-100 bg-dots dark:bg-dots-dark font-dm-sans dark:text-lemon-50 text-zinc-950 transition-colors dark:bg-zinc-900;
   }
 
   dialog {

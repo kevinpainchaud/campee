@@ -5,7 +5,7 @@ import type { AvatarProps } from "./types";
 export const Avatar = ({ className }: AvatarProps) => {
   return (
     <svg
-      className={classNames(className, "fill-zinc-950")}
+      className={classNames(className, "fill-zinc-900")}
       viewBox="0 0 256 256"
       xmlns="http://www.w3.org/2000/svg"
     >

@@ -11,7 +11,7 @@ export const ShowcaseItem = ({
   title,
 }: ShowcaseItemProps) => {
   return (
-    <div className="shadow-pill border-pill bg-lemon-50 flex flex-col overflow-hidden rounded-2xl md:min-h-[620px] md:flex-row dark:bg-zinc-950">
+    <div className="shadow-pill border-pill bg-lemon-50 flex flex-col overflow-hidden rounded-2xl md:min-h-[620px] md:flex-row dark:bg-zinc-900">
       <div
         className={classNames(
           "flex flex-col items-start justify-center gap-4 md:w-1/2 md:gap-6",

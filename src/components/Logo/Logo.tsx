@@ -14,8 +14,8 @@ export const Logo = ({ iconOnly, reversed, showBeta }: LogoProps) => {
     >
       <div
         className={classNames("w-6 lg:w-7", {
-          "dark:fill-lemon-50 fill-zinc-950": !reversed,
-          "fill-lemon-50 dark:fill-zinc-950": reversed,
+          "dark:fill-lemon-50 fill-zinc-900": !reversed,
+          "fill-lemon-50 dark:fill-zinc-900": reversed,
         })}
       >
         <AppLogo />

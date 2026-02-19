@@ -41,15 +41,15 @@ export const Button = forwardRef<
           "rounded-xl": variant === "dropdownMenuItem",
         },
         {
-          "bg-lemon-50 dark:text-lemon-50 border-transparent text-zinc-950 dark:bg-zinc-950":
+          "bg-lemon-50 dark:text-lemon-50 border-transparent text-zinc-950 dark:bg-zinc-900":
             variant === "default" && !reversed && !danger && !success,
-          "bg-lemon-50 dark:text-lemon-50 text-zinc-950 dark:bg-zinc-950":
+          "bg-lemon-50 dark:text-lemon-50 text-zinc-950 dark:bg-zinc-900":
             variant === "outline" && !reversed && !danger && !success,
           "border-transparent":
             variant === "transparent" && !reversed && !danger && !success,
-          "dark:bg-lemon-50 text-lemon-50 dark:border-lemon-50 dark:hover:shadow-lemon-50 bg-zinc-950 dark:text-zinc-950":
+          "dark:bg-lemon-50 text-lemon-50 dark:border-lemon-50 dark:hover:shadow-lemon-50 bg-zinc-900 dark:text-zinc-950":
             variant === "primary" && !reversed && !danger && !success,
-          "dark:hover:bg-lemon-50/10 border-transparent hover:bg-zinc-950/10":
+          "dark:hover:bg-lemon-50/10 border-transparent hover:bg-zinc-900/10":
             variant === "dropdownMenuItem" &&
             !reversed &&
             !danger &&
@@ -65,13 +65,13 @@ export const Button = forwardRef<
             !danger &&
             !success &&
             !active,
-          "dark:bg-lemon-50 border-lemon-50 hover:shadow-lemon-50 bg-zinc-950 dark:border-zinc-600 dark:text-zinc-600 dark:hover:shadow-zinc-600":
+          "dark:bg-lemon-50 border-lemon-50 hover:shadow-lemon-50 bg-zinc-900 dark:border-zinc-600 dark:text-zinc-600 dark:hover:shadow-zinc-600":
             variant === "outline" && reversed && !danger && !success,
-          "text-lemon-50 border-transparent bg-zinc-950":
+          "text-lemon-50 border-transparent bg-zinc-900":
             variant === "default" && reversed && !danger && !success,
         },
         {
-          "bg-lemon-50 border-red-600 text-red-600 hover:shadow-red-600 dark:bg-zinc-950":
+          "bg-lemon-50 border-red-600 text-red-600 hover:shadow-red-600 dark:bg-zinc-900":
             variant === "outline" && danger,
           "bg-lemon-50 border-transparent text-red-600":
             variant === "default" && danger,
@@ -83,7 +83,7 @@ export const Button = forwardRef<
             variant === "primary" && danger,
         },
         {
-          "bg-lemon-50 border-green-600 text-green-600 hover:shadow-green-600 dark:bg-zinc-950":
+          "bg-lemon-50 border-green-600 text-green-600 hover:shadow-green-600 dark:bg-zinc-900":
             variant === "outline" && success,
           "bg-lemon-50 border-transparent text-green-600":
             variant === "default" && success,
@@ -93,7 +93,7 @@ export const Button = forwardRef<
             variant === "primary" && success,
         },
         {
-          "dark:bg-lemon-50 text-lemon-50 border-transparent bg-zinc-950 dark:text-zinc-950":
+          "dark:bg-lemon-50 text-lemon-50 border-transparent bg-zinc-900 dark:text-zinc-950":
             variant === "dropdownMenuItem" && active,
         },
         {

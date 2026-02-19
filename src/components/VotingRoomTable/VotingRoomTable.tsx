@@ -95,12 +95,12 @@ export const VotingRoomTable = ({
         <div className="h-4 lg:h-14" ref={tableRef}>
           <svg className="w-full">
             <path
-              className="fill-lemon-100 stroke-zinc-950 stroke-2 transition-colors dark:fill-zinc-950 dark:stroke-zinc-600"
+              className="fill-lemon-100 stroke-zinc-950 stroke-2 transition-colors dark:fill-zinc-900 dark:stroke-zinc-600"
               d={tablePath}
             />
           </svg>
         </div>
-        <div className="bg-lemon-100 transition-colors dark:bg-zinc-950">
+        <div className="bg-lemon-100 transition-colors dark:bg-zinc-900">
           <UserSeat />
         </div>
       </div>

@@ -67,7 +67,7 @@ export const Dropdown = ({ renderContent, renderTrigger }: DropdownProps) => {
                 style: floatingStyles,
               })}
             >
-              <div className="border-pill shadow-pill bg-lemon-50 mt-2 max-w-64 rounded-2xl p-1.5 dark:bg-zinc-950">
+              <div className="border-pill shadow-pill bg-lemon-50 mt-2 max-w-64 rounded-2xl p-1.5 dark:bg-zinc-900">
                 {renderContent({ close: () => setOpen(false) })}
               </div>
             </div>
