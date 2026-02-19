@@ -174,7 +174,7 @@
 }
 
 @utility overlay {
-  @apply bg-zinc-950/70;
+  @apply bg-zinc-900/70;
 }
 
 @utility skeleton {
@@ -183,7 +183,7 @@
 
 @utility bg-dots {
   background-image: radial-gradient(
-    oklch(from var(--color-zinc-950) l c h / 0.2) 1px,
+    oklch(from var(--color-zinc-900) l c h / 0.25) 1px,
     transparent 0
   );
   background-size: calc(var(--spacing, 0.25rem) * 6)
@@ -225,7 +225,7 @@
 
 @layer base {
   body {
-    @apply bg-lemon-100 bg-dots dark:bg-dots-dark font-dm-sans dark:text-lemon-50 text-zinc-950 transition-colors dark:bg-zinc-900;
+    @apply bg-lemon-100 bg-dots dark:bg-dots-dark font-dm-sans dark:text-lemon-50 text-zinc-900 transition-colors dark:bg-zinc-900;
   }
 
   dialog {

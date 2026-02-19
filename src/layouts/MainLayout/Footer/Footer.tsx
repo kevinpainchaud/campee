@@ -18,7 +18,7 @@ export const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="text-lemon-50 bg-zinc-900 dark:bg-zinc-950">
+    <footer className="text-lemon-50 border-t-2 border-t-zinc-900 bg-zinc-900 dark:border-t-zinc-600">
       <div className="centered-container md:px-6">
         <div className="m-auto flex max-w-2xl flex-col gap-8 py-16 md:gap-16 md:py-26">
           <div className="flex flex-col items-center gap-3">
