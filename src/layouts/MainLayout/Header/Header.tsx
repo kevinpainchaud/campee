@@ -29,7 +29,7 @@ export const Header = ({ className }: HeaderProps) => {
             title={t("common.navigation.main_menu_trigger_button_label")}
           />
           <nav className="hidden lg:flex">
-            <ul className="flex items-center gap-4">
+            <ul className="flex items-center gap-2">
               <li>
                 <UserDropdown />
               </li>
