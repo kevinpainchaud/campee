@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 import { PiGearBold, PiListBold } from "react-icons/pi";
 import { Link } from "react-router";
 
-import { AccessibilityControls } from "../../../components/AccessibilityControls/AccessibilityControls";
 import { Button } from "../../../components/Button/Button";
 import { Logo } from "../../../components/Logo/Logo";
+import { ThemeSwitcherButton } from "../../../components/ThemeSwitcherButton/ThemeSwitcherButton";
 import { UserDropdown } from "../../../components/UserDropdown/UserDropdown";
 import { VotingRoomContext } from "../../../context/VotingRoomContext";
 import { InviteDropdown } from "../InviteDropdown/InviteDropdown";
@@ -74,11 +74,13 @@ export const Header = ({
               <li className="empty:hidden">
                 <UserDropdown />
               </li>
+              <li>
+                <ThemeSwitcherButton />
+              </li>
             </ul>
           </nav>
         </>
       )}
-      <AccessibilityControls className="hidden lg:flex" />
     </header>
   );
 };

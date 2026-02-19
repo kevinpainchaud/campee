@@ -5,6 +5,7 @@ import { PiGithubLogoBold, PiHandHeart, PiHeartFill } from "react-icons/pi";
 import { Link } from "react-router";
 
 import { Button } from "../../../components/Button/Button";
+import { LanguageSwitcherDropdown } from "../../../components/LanguageSwitcherDropdown/LanguageSwitcherDropdown";
 import { Logo } from "../../../components/Logo/Logo";
 import { APP_GLOBAL_VARIABLES } from "../../../constants/appGlobalVariables";
 import { LEGAL_NOTICES_ROUTE_PATH } from "../../../constants/routes";
@@ -54,15 +55,24 @@ export const Footer = () => {
           </div>
         </div>
         <hr className="border-lemon-50/10" />
-        <div className="flex flex-col gap-6 py-6 md:flex-row md:gap-12 md:py-12">
-          <div className="flex grow flex-col items-center gap-6 md:flex-row md:gap-12">
+        <div className="flex flex-col gap-6 py-6 xl:flex-row xl:gap-12 xl:py-12">
+          <div className="flex grow flex-col items-center gap-6 xl:flex-row xl:gap-12">
             <Logo reversed={!darkThemeEnabled} showBeta />
-            <MadeInEuropeLogo className="w-24 md:w-28" />
-            <Link to={LEGAL_NOTICES_ROUTE_PATH}>
-              {t("layouts.main_layout.footer.legal_notices")}
-            </Link>
+            <MadeInEuropeLogo className="w-24 xl:w-28" />
+            <nav>
+              <ul className="flex items-center gap-6">
+                <li>
+                  <Link to={LEGAL_NOTICES_ROUTE_PATH}>
+                    {t("layouts.main_layout.footer.legal_notices")}
+                  </Link>
+                </li>
+                <li>
+                  <LanguageSwitcherDropdown />
+                </li>
+              </ul>
+            </nav>
           </div>
-          <div className="text-lemon-50/50 flex flex-col items-center gap-2 md:flex-row md:gap-12">
+          <div className="text-lemon-50/50 flex flex-col items-center gap-2 xl:flex-row xl:gap-12">
             <div>© Copyright {dayjs().year()}</div>
             <div className="flex items-center gap-2">
               <span>{t("layouts.main_layout.footer.made_with")}</span>
