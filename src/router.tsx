@@ -1,4 +1,7 @@
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { ErrorBoundary } from "react-error-boundary";
+import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 import { createBrowserRouter, Outlet, ScrollRestoration } from "react-router";
 
 import { GlobalDrawers } from "./components/GlobalDrawers/GlobalDrawers";
@@ -14,6 +17,8 @@ import { FrontPage } from "./pages/FrontPage/FrontPage";
 import { LegalNoticePage } from "./pages/LegalNoticePage/LegalNoticePage";
 import { NotFoundPage } from "./pages/NotFoundPage/NotFoundPage";
 import { VotingRoomPage } from "./pages/VotingRoomPage";
+import { AppProviders } from "./providers/AppProviders";
+import { getTitleTagContent } from "./utils/titleTag";
 
 export const router = createBrowserRouter([
   {
@@ -45,14 +50,24 @@ export const router = createBrowserRouter([
         path: "*",
       },
     ],
+    Component: () => {
+      const { t } = useTranslation();
 
-    element: (
-      <ErrorBoundary FallbackComponent={ErrorPage}>
-        <ScrollRestoration />
-        <GlobalQueryErrorListener />
-        <GlobalDrawers />
-        <Outlet />
-      </ErrorBoundary>
-    ),
+      return (
+        <AppProviders>
+          <Helmet>
+            <title>{getTitleTagContent()}</title>
+            <meta content={t("common.app_baseline")} name="description" />
+          </Helmet>
+          <SpeedInsights />
+          <ScrollRestoration />
+          <ErrorBoundary FallbackComponent={ErrorPage}>
+            <GlobalQueryErrorListener />
+            <GlobalDrawers />
+            <Outlet />
+          </ErrorBoundary>
+        </AppProviders>
+      );
+    },
   },
 ]);
