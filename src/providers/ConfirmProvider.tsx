@@ -1,4 +1,5 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { useLocation } from "react-router";
 
 import { ConfirmModal } from "../components/ConfirmModal/ConfirmModal";
 import { ConfirmContext } from "../context/ConfirmContext";
@@ -9,6 +10,8 @@ export const ConfirmProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
+  const { pathname } = useLocation();
+
   const [confirmOptions, setConfirmOptions] = useState<ConfirmOptions>();
   const [confirmModalOpen, setConfirmModalOpen] = useState(false);
 
@@ -16,6 +19,13 @@ export const ConfirmProvider = ({
     setConfirmOptions(confirmOptions);
     setConfirmModalOpen(true);
   }, []);
+
+  useEffect(() => {
+    if (pathname) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setConfirmModalOpen(false);
+    }
+  }, [pathname]);
 
   return (
     <ConfirmContext.Provider value={{ confirm }}>
