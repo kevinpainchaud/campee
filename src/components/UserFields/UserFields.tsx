@@ -9,7 +9,7 @@ export const UserFields = () => {
   return (
     <>
       <InputField
-        data-testid="user-fields-display-name-field"
+        data-testid="user-fields-display-name-field-input"
         label={t("entities.profile.props.display_name")}
         name="displayName"
       />
