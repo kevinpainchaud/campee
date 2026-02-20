@@ -1,6 +1,12 @@
 import { QRCodeSVG } from "qrcode.react";
 import { useTranslation } from "react-i18next";
-import { PiCheckCircleBold, PiCopyBold, PiUserPlusBold } from "react-icons/pi";
+import {
+  PiCaretDownBold,
+  PiCaretUpBold,
+  PiCheckCircleBold,
+  PiCopyBold,
+  PiUserPlusBold,
+} from "react-icons/pi";
 
 import { Button } from "../../../components/Button/Button";
 import { Dropdown } from "../../../components/Dropdown/Dropdown";
@@ -57,8 +63,13 @@ export const InviteDropdown = () => {
           </div>
         ) : undefined
       }
-      renderTrigger={() => (
-        <Button leftIcon={PiUserPlusBold} tagElement="button" variant="outline">
+      renderTrigger={({ active }) => (
+        <Button
+          leftIcon={PiUserPlusBold}
+          rightIcon={active ? PiCaretUpBold : PiCaretDownBold}
+          tagElement="button"
+          variant="outline"
+        >
           {t("pages.voting_room_page.invite_dropdown.trigger_button_label")}
         </Button>
       )}
