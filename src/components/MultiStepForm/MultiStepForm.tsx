@@ -81,6 +81,7 @@ export const MultiStepForm = <FormValues,>({
             {render({
               actionButton: hasNextStep ? (
                 <Button
+                  data-testid="multi-step-form-continue-button"
                   disabled={activeEnabledStepHasValidationErrors}
                   key="continue"
                   onClick={navigateToNextStep}
@@ -92,6 +93,7 @@ export const MultiStepForm = <FormValues,>({
                 </Button>
               ) : (
                 <Button
+                  data-testid="multi-step-form-submit-button"
                   disabled={formRenderProps.hasValidationErrors}
                   key="submit"
                   loading={formRenderProps.submitting}

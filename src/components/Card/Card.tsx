@@ -6,6 +6,8 @@ export const Card = ({
   active,
   children,
   className,
+  "data-testid": dataTestId,
+  "data-testvalue-key": dataTestValueKey,
   inert,
   onClick,
   onMouseEnter,
@@ -34,6 +36,8 @@ export const Card = ({
               type === "frontface" || type === "placeholder",
           },
         )}
+        data-testid={dataTestId}
+        data-testvalue-key={dataTestValueKey}
         inert={inert}
         onClick={onClick}
         onMouseEnter={onMouseEnter}

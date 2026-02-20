@@ -1,6 +1,3 @@
-import type { FieldProps } from "react-final-form";
+import type { FormField } from "../../types/formField";
 
-export type BackfaceCardStyleFieldProps = Pick<FieldProps, "name"> & {
-  helperText?: string;
-  label: string;
-};
+export type BackfaceCardStyleFieldProps = FormField;

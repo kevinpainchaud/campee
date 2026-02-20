@@ -5,6 +5,7 @@ import type { InputFieldProps } from "./types";
 
 export const InputField = ({
   autoFocus,
+  "data-testid": dataTestId,
   helperText,
   label,
   name,
@@ -25,6 +26,7 @@ export const InputField = ({
         autoFocus={autoFocus}
         className="border-pill bg-lemon-50 rounded-lg p-2 dark:bg-zinc-900"
         data-1p-ignore
+        data-testid={dataTestId}
         id={name}
         type={type}
       />

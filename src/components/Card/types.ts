@@ -9,6 +9,8 @@ export type CardProps = Pick<
   | "title"
 > & {
   active?: boolean;
+  "data-testid"?: string;
+  "data-testvalue-key"?: string;
   disabled?: boolean;
   saturated?: boolean;
   tagElement?: "button" | "div";

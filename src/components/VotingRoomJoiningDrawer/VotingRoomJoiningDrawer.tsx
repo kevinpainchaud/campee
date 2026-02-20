@@ -87,6 +87,7 @@ export const VotingRoomJoiningDrawer = ({
           <Drawer
             actionButton={
               <Button
+                data-testid="voting-room-joining-drawer-submit-button"
                 disabled={hasValidationErrors}
                 loading={submitting}
                 onClick={handleSubmit}

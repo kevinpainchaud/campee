@@ -32,7 +32,7 @@ export const ParticipantCard = ({ participant }: ParticipantCardProps) => {
   }
 
   return (
-    <div ref={containerRef}>
+    <div data-testid="participant-card" ref={containerRef}>
       <div className="fixed" style={{ width: containerWidth ?? undefined }}>
         <FlyingUpReactions
           flyingUpReactions={flyingUpReactions}
@@ -101,6 +101,7 @@ export const ParticipantCard = ({ participant }: ParticipantCardProps) => {
               >
                 <button
                   className="border-pill hover:shadow-pill bg-lemon-50 size-14 cursor-pointer rounded-full text-2xl dark:bg-zinc-900"
+                  data-testid="participant-card-nudge-button"
                   onClick={handleNudgeButtonClick}
                   title={t("entities.nudge.actions.send_nudge")}
                 >

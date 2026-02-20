@@ -27,6 +27,7 @@ export type ButtonProps = Pick<
 > & {
   active?: boolean;
   danger?: boolean;
+  "data-testid"?: string;
   leftIcon?: IconType;
   reversed?: boolean;
   rightIcon?: IconType;

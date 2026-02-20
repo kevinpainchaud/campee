@@ -45,6 +45,8 @@ export const CardsInHand = ({
         >
           <FrontfaceCard
             active={voteValue === activeVoteValue}
+            data-testid="cards-in-hand-card"
+            data-testvalue-key={voteValue ?? undefined}
             onClick={() => onCardClick?.(voteValue)}
             onMouseEnter={() => setHoveredCardIndex(index)}
             onMouseLeave={() => setHoveredCardIndex(undefined)}

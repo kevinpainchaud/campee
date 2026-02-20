@@ -53,6 +53,7 @@ export const EmptyVotingRoomState = ({
             </Button>
           ) : (
             <Button
+              data-testid="empty-voting-room-state-url-copy-button"
               leftIcon={PiCopyBold}
               onClick={() => {
                 copyVotingRoomUrl();

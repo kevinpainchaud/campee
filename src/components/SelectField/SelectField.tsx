@@ -7,6 +7,7 @@ import type { SelectFieldProps } from "./types";
 
 export const SelectField = ({
   autoFocus,
+  "data-testid": dataTestId,
   disabled,
   helperText,
   label,
@@ -25,6 +26,7 @@ export const SelectField = ({
             "border-pill bg-lemon-50 col-start-1 row-start-1 appearance-none rounded-lg p-2 dark:bg-zinc-900",
             "disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-600",
           )}
+          data-testid={dataTestId}
           disabled={disabled}
           id={name}
         >

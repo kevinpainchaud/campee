@@ -5,6 +5,8 @@ export type FrontfaceCardProps = Pick<
   CardProps,
   | "active"
   | "className"
+  | "data-testid"
+  | "data-testvalue-key"
   | "inert"
   | "onClick"
   | "onMouseEnter"

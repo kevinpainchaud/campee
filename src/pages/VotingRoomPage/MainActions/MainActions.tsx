@@ -64,6 +64,7 @@ export const MainActions = ({
   } else {
     return (
       <Button
+        data-testid="main-actions-votes-reveal-button"
         leftIcon={PiEyeBold}
         onClick={() => {
           revealVotes(votingRoom);

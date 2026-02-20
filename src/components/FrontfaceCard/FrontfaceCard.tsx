@@ -8,6 +8,8 @@ import type { FrontfaceCardProps } from "./types";
 export const FrontfaceCard = ({
   active,
   className,
+  "data-testid": dataTestId,
+  "data-testvalue-key": dataTestValueKey,
   inert,
   onClick,
   onMouseEnter,
@@ -21,6 +23,8 @@ export const FrontfaceCard = ({
     <Card
       active={active}
       className={className}
+      data-testid={dataTestId}
+      data-testvalue-key={dataTestValueKey}
       inert={inert}
       onClick={onClick}
       onMouseEnter={onMouseEnter}

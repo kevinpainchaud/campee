@@ -40,6 +40,8 @@ export const BackfaceCardStyleField = ({
             <div className="relative">
               <BackfaceCard
                 backfaceCardStyleKey={backfaceCardStyleKey}
+                data-testid="backface-card-style-field-button"
+                data-testvalue-key={backfaceCardStyleKey}
                 onClick={() => handleCardClick(backfaceCardStyleKey)}
                 saturated={
                   field.input.value !== "" &&

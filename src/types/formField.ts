@@ -10,6 +10,7 @@ export type FormField = Pick<FieldProps, "name"> &
     >,
     "autoFocus" | "disabled" | "placeholder"
   > & {
+    "data-testid"?: string;
     helperText?: string;
     label: string;
     optional?: boolean;

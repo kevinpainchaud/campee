@@ -5,6 +5,8 @@ import type { BackfaceCardProps } from "./types";
 export const BackfaceCard = ({
   backfaceCardStyleKey,
   className,
+  "data-testid": dataTestId,
+  "data-testvalue-key": dataTestValueKey,
   inert,
   onClick,
   saturated,
@@ -14,6 +16,8 @@ export const BackfaceCard = ({
   return (
     <Card
       className={className}
+      data-testid={dataTestId}
+      data-testvalue-key={dataTestValueKey}
       inert={inert}
       onClick={onClick}
       saturated={saturated}

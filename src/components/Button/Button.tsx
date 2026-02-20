@@ -16,6 +16,7 @@ export const Button = forwardRef<
       children,
       className,
       danger,
+      "data-testid": dataTestId,
       leftIcon,
       onClick,
       reversed,
@@ -28,7 +29,9 @@ export const Button = forwardRef<
     },
     ref,
   ) => {
-    const commonProps: React.HTMLAttributes<HTMLElement> = {
+    const commonProps: React.HTMLAttributes<
+      HTMLButtonElement | HTMLAnchorElement
+    > & { "data-testid"?: string } = {
       className: classNames(
         className,
         "border-pill default-style-none inline-flex items-center",
@@ -107,6 +110,7 @@ export const Button = forwardRef<
           "size-14 text-2xl": size === "lg" && !children,
         },
       ),
+      "data-testid": dataTestId,
       onClick,
       title,
     };

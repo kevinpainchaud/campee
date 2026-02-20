@@ -34,6 +34,7 @@ export const ConfirmModal = ({
           </Button>
           <Button
             danger={confirmButtonDanger}
+            data-testid="confirm-modal-confirm-button"
             onClick={() => {
               setOpen(false);
               onConfirmButtonClick?.();

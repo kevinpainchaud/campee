@@ -19,6 +19,7 @@ export const HeroSection = () => {
       </div>
       <div>
         <Button
+          data-testid="hero-section-voting-room-creation-button"
           onClick={() => {
             setVotingRoomCreationDrawerOpen(true);
             track("click_voting_room_creation_button");

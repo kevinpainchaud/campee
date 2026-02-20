@@ -2,5 +2,5 @@ import type { CardProps } from "../Card/types";
 
 export type PlaceholderCardProps = Pick<
   CardProps,
-  "className" | "inert" | "onClick" | "tagElement"
+  "className" | "data-testid" | "inert" | "onClick" | "tagElement"
 >;

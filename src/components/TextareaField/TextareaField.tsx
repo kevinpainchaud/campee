@@ -5,6 +5,7 @@ import type { TextareaFieldProps } from "./types";
 
 export const TextareaField = ({
   autoFocus,
+  "data-testid": dataTestId,
   helperText,
   label,
   name,
@@ -24,6 +25,7 @@ export const TextareaField = ({
         {...field.input}
         autoFocus={autoFocus}
         className="border-pill bg-lemon-50 rounded-lg p-2 dark:bg-zinc-900"
+        data-testid={dataTestId}
         id={name}
         placeholder={placeholder}
         rows={6}
