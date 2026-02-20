@@ -79,44 +79,47 @@ export const Drawer = ({
           "group-not-open/drawer:animate-out group-not-open/drawer:slide-out-to-right-20 group-not-open/drawer:fade-out group-open/drawer:animate-in group-open/drawer:slide-in-from-right-20 group-open/drawer:fade-in",
         )}
       >
-        <div className="flex items-center gap-4 p-6">
-          {backButton && (
-            <Button
-              leftIcon={PiArrowLeftBold}
-              onClick={backButton.onClick}
-              tagElement="button"
-              title={t("common.actions.back")}
-              type="button"
-              variant="outline"
-            />
-          )}
-          <div className="grow font-semibold">{title}</div>
-          <Button
-            leftIcon={PiXBold}
-            onClick={() => setOpen(false)}
-            ref={closeButtonRef}
-            tagElement="button"
-            title={t("common.actions.close")}
-            type="button"
-          />
-        </div>
         {open && (
-          <div
-            className={classNames(
-              "flex grow flex-col gap-6 overflow-y-auto px-6",
-              { "pb-6": !actionButton },
-            )}
-          >
-            {isPending ? (
-              <div className="flex grow items-center justify-center">
-                <Spinner />
-              </div>
-            ) : (
-              children
-            )}
-          </div>
+          <>
+            <div className="flex items-center gap-4 p-6">
+              {backButton && (
+                <Button
+                  leftIcon={PiArrowLeftBold}
+                  onClick={backButton.onClick}
+                  tagElement="button"
+                  title={t("common.actions.back")}
+                  type="button"
+                  variant="transparent"
+                />
+              )}
+              <div className="grow font-semibold">{title}</div>
+              <Button
+                leftIcon={PiXBold}
+                onClick={() => setOpen(false)}
+                ref={closeButtonRef}
+                tagElement="button"
+                title={t("common.actions.close")}
+                type="button"
+                variant="transparent"
+              />
+            </div>
+            <div
+              className={classNames(
+                "flex grow flex-col gap-6 overflow-y-auto px-6",
+                { "pb-6": !actionButton },
+              )}
+            >
+              {isPending ? (
+                <div className="flex grow items-center justify-center">
+                  <Spinner />
+                </div>
+              ) : (
+                children
+              )}
+            </div>
+            {actionButton && <div className="p-6 *:w-full">{actionButton}</div>}
+          </>
         )}
-        {actionButton && <div className="p-6 *:w-full">{actionButton}</div>}
       </div>
     </dialog>
   );
