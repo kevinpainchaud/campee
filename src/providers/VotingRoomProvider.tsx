@@ -63,8 +63,7 @@ export const VotingRoomProvider = ({
       uniqBy<Participant>(
         participants
           ?.filter(({ user_id }) => user_id !== user?.id)
-          .filter(({ user_id }) => onlineUsersIds.includes(user_id))
-          ?.reverse(),
+          .filter(({ user_id }) => onlineUsersIds.includes(user_id)),
         "user_id",
       ),
     [onlineUsersIds, participants, user?.id],
