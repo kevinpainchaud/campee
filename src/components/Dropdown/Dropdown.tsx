@@ -2,7 +2,6 @@ import {
   autoPlacement,
   FloatingFocusManager,
   safePolygon,
-  useClick,
   useDismiss,
   useFloating,
   useHover,
@@ -36,7 +35,6 @@ export const Dropdown = ({ renderContent, renderTrigger }: DropdownProps) => {
       },
       handleClose: safePolygon(),
     }),
-    useClick(context),
     useDismiss(context),
   ]);
 
