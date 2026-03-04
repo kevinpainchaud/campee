@@ -5,9 +5,9 @@ import type { ContentProps } from "./types";
 export const Content = ({ children, leftIcon, rightIcon }: ContentProps) => {
   return (
     <>
-      {leftIcon && React.createElement(leftIcon)}
+      {leftIcon && React.createElement(leftIcon, { className: "shrink-0" })}
       {children && <span>{children}</span>}
-      {rightIcon && React.createElement(rightIcon)}
+      {rightIcon && React.createElement(rightIcon, { className: "shrink-0" })}
     </>
   );
 };
