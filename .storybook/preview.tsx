@@ -38,11 +38,11 @@ const preview: Preview = {
       );
     },
     (Story) => (
-      <AppProviders>
-        <MemoryRouter>
+      <MemoryRouter>
+        <AppProviders>
           <Story />
-        </MemoryRouter>
-      </AppProviders>
+        </AppProviders>
+      </MemoryRouter>
     ),
   ],
   parameters: {
