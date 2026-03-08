@@ -1,6 +1,6 @@
 export type VotingRoomTableProps = Pick<
   React.HTMLAttributes<HTMLDivElement>,
-  "className" | "style"
+  "className"
 > & {
   onSeeQrCodeButtonClick: () => void;
 };

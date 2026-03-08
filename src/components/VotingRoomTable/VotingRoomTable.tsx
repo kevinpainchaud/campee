@@ -18,7 +18,6 @@ import { useTablePath } from "./useTablePath";
 export const VotingRoomTable = ({
   className,
   onSeeQrCodeButtonClick,
-  style,
 }: VotingRoomTableProps) => {
   const { isPending, peerParticipants, votingRoom } =
     useContext(VotingRoomContext);
@@ -42,46 +41,11 @@ export const VotingRoomTable = ({
   return (
     <>
       <main
-        className={classNames(
-          className,
-          "relative flex items-center justify-center",
-          {
-            "overflow-y-auto": !showParticipantsAsSeats,
-          },
-        )}
-        style={style}
+        className={classNames(className, "relative flex", {
+          "overflow-y-auto": !showParticipantsAsSeats,
+        })}
       >
-        {isPending ? (
-          <div className="m-auto flex w-full justify-center">
-            <Spinner />
-          </div>
-        ) : votingRoom ? (
-          peerParticipants && peerParticipants.length > 0 ? (
-            <>
-              {showParticipantsAsSeats ? (
-                <div
-                  className="relative h-full w-full"
-                  style={
-                    { "--table-path": `"${tablePath}"` } as React.CSSProperties
-                  }
-                >
-                  <PeerParticipantsSeats />
-                </div>
-              ) : (
-                <div className="m-auto p-4">
-                  <PeerParticipantsList />
-                </div>
-              )}
-            </>
-          ) : (
-            <div className="m-auto p-4 pt-0 lg:p-0">
-              <EmptyVotingRoomState
-                onSeeQrCodeButtonClick={onSeeQrCodeButtonClick}
-              />
-            </div>
-          )
-        ) : undefined}
-        <div className="absolute top-1/2 left-4 hidden -translate-y-1/2 lg:left-6 lg:flex">
+        <div className="hidden lg:sticky lg:top-0 lg:flex lg:shrink-0 lg:items-center lg:pl-6">
           <Button
             leftIcon={PiChatTeardropTextBold}
             onClick={() => setFeedbackDrawerOpen(true)}
@@ -89,6 +53,40 @@ export const VotingRoomTable = ({
             title={t("entities.feedback.actions.share_feedback")}
             variant="outline"
           ></Button>
+        </div>
+        <div className={classNames("flex grow items-center justify-center")}>
+          {isPending ? (
+            <div className="m-auto flex w-full justify-center">
+              <Spinner />
+            </div>
+          ) : votingRoom ? (
+            peerParticipants && peerParticipants.length > 0 ? (
+              <>
+                {showParticipantsAsSeats ? (
+                  <div
+                    className="relative h-full w-full"
+                    style={
+                      {
+                        "--table-path": `"${tablePath}"`,
+                      } as React.CSSProperties
+                    }
+                  >
+                    <PeerParticipantsSeats />
+                  </div>
+                ) : (
+                  <div className="m-auto p-4">
+                    <PeerParticipantsList />
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className="m-auto p-4 pt-0 lg:p-0">
+                <EmptyVotingRoomState
+                  onSeeQrCodeButtonClick={onSeeQrCodeButtonClick}
+                />
+              </div>
+            )
+          ) : undefined}
         </div>
       </main>
       <div className="sticky bottom-0">
