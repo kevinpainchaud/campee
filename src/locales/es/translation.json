@@ -208,7 +208,7 @@
         "title": "Sus estimaciones,<br />sin fricción"
       },
       "how_it_works_section": {
-        "paragraph": "El Planning poker, también llamado Scrum poker, es una <strong>técnica de estimación colaborativa</strong> utilizada por equipos ágiles. Cada miembro del equipo elige en secreto una carta que representa su estimación del esfuerzo requerido para una tarea. Una vez que todos han votado, las cartas se revelan simultáneamente para facilitar el debate y alcanzar un consenso.",
+        "paragraph": "El planning poker, también llamado Scrum poker, es una <strong>técnica de estimación colaborativa</strong> utilizada por equipos ágiles. Cada miembro del equipo elige en secreto una carta que representa su estimación del esfuerzo requerido para una tarea. Una vez que todos han votado, las cartas se revelan simultáneamente para facilitar el debate y alcanzar un consenso.",
         "subtitle": "El concepto",
         "title": "¿Cómo funciona?"
       },
@@ -221,12 +221,12 @@
           "unlimited_and free": "Ilimitado y gratis"
         },
         "concurrent_logo_alt": "Logo de {{concurrent_name}}",
-        "sub_subtitle": "¿Cómo se posiciona {{app_name}} frente a otras aplicaciones de Planning poker en línea?",
+        "sub_subtitle": "¿Cómo se posiciona {{app_name}} frente a otras aplicaciones de planning poker en línea?",
         "subtitle": "La comparativa",
         "title": "¿Por qué elegir {{app_name}}?"
       },
       "why_use_it_section": {
-        "paragraph": "El Planning poker permite <strong>evitar el sesgo de anclaje</strong>, donde la opinión de una persona influye en las demás. Al revelar las estimaciones simultáneamente, cada miembro comparte su punto de vista de forma independiente. Esto <strong>favorece discusiones constructivas</strong> y da como resultado estimaciones más precisas y consensuadas.",
+        "paragraph": "El planning poker permite <strong>evitar el sesgo de anclaje</strong>, donde la opinión de una persona influye en las demás. Al revelar las estimaciones simultáneamente, cada miembro comparte su punto de vista de forma independiente. Esto <strong>favorece discusiones constructivas</strong> y da como resultado estimaciones más precisas y consensuadas.",
         "subtitle": "Los beneficios",
         "title": "¿Por qué utilizarlo?"
       }

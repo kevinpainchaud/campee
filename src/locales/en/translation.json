@@ -221,7 +221,7 @@
           "unlimited_and free": "Unlimited & free"
         },
         "concurrent_logo_alt": "{{concurrent_name}} logo",
-        "sub_subtitle": "How does {{app_name}} compare to other online Planning poker applications?",
+        "sub_subtitle": "How does {{app_name}} compare to other online planning poker applications?",
         "subtitle": "The comparison",
         "title": "Why choose {{app_name}}?"
       },

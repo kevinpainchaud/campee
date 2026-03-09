@@ -26,5 +26,5 @@ Sauf mention contraire, tous les éléments accessibles sur le site (textes, ima
 Conformément au Règlement Général sur la Protection des Données (RGPD), les informations suivantes sont portées à la connaissance des utilisateurs :
 
 - **Données collectées :** Prénom ou pseudonyme, et nom de l'entreprise (facultatif).
-- **Finalité :** Ces données sont nécessaires au fonctionnement technique de l'outil de Planning poker pour identifier les participants au sein d'une session.
+- **Finalité :** Ces données sont nécessaires au fonctionnement technique de l'outil de planning poker pour identifier les participants au sein d'une session.
 - **Conservation :** Une fois la session inactive, ses données sont supprimées automatiquement au bout de 7 jours.

@@ -208,7 +208,7 @@
         "title": "Vos estimations,<br />sans friction"
       },
       "how_it_works_section": {
-        "paragraph": "Le Planning poker, aussi appelé Scrum poker, est une <strong>technique d'estimation collaborative</strong> utilisée par les équipes agiles. Chaque membre de l'équipe choisit secrètement une carte représentant son estimation de l'effort requis pour une tâche. Une fois que tous ont voté, les cartes sont révélées simultanément pour faciliter la discussion et atteindre un consensus.",
+        "paragraph": "Le planning poker, aussi appelé Scrum poker, est une <strong>technique d'estimation collaborative</strong> utilisée par les équipes agiles. Chaque membre de l'équipe choisit secrètement une carte représentant son estimation de l'effort requis pour une tâche. Une fois que tous ont voté, les cartes sont révélées simultanément pour faciliter la discussion et atteindre un consensus.",
         "subtitle": "Le concept",
         "title": "Comment ça fonctionne ?"
       },
@@ -221,12 +221,12 @@
           "unlimited_and free": "Illimité & gratuit"
         },
         "concurrent_logo_alt": "Logo de {{concurrent_name}}",
-        "sub_subtitle": "Comment se positionne {{app_name}} par rapport aux autres applications de Planning poker en ligne ?",
+        "sub_subtitle": "Comment se positionne {{app_name}} par rapport aux autres applications de planning poker en ligne ?",
         "subtitle": "Le comparatif",
         "title": "Pourquoi choisir {{app_name}} ?"
       },
       "why_use_it_section": {
-        "paragraph": "Le Planning poker permet d'<strong>éviter les biais d'ancrage</strong> où l'opinion d'une personne influence les autres. En révélant les estimations simultanément, chaque membre partage son point de vue de manière indépendante. Cela <strong>favorise des discussions constructives</strong> et aboutit à des estimations plus précises et consensuelles.",
+        "paragraph": "Le planning poker permet d'<strong>éviter les biais d'ancrage</strong> où l'opinion d'une personne influence les autres. En révélant les estimations simultanément, chaque membre partage son point de vue de manière indépendante. Cela <strong>favorise des discussions constructives</strong> et aboutit à des estimations plus précises et consensuelles.",
         "subtitle": "Les intérêts",
         "title": "Pourquoi l'utiliser ?"
       }
