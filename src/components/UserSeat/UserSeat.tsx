@@ -109,6 +109,7 @@ export const UserSeat = () => {
             />
             <Button
               className="absolute top-1/2 -right-6 translate-x-full -translate-y-1/2"
+              inert={showCardsList}
               leftIcon={PiPencilSimpleBold}
               onClick={() => setEditionMode(true)}
               size="sm"

@@ -20,6 +20,7 @@ export type ButtonProps = Pick<
   React.HTMLAttributes<HTMLElement>,
   | "children"
   | "className"
+  | "inert"
   | "onClick"
   | "onMouseEnter"
   | "onPointerEnter"

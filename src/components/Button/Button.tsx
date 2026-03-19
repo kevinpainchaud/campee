@@ -17,6 +17,7 @@ export const Button = forwardRef<
       className,
       danger,
       "data-testid": dataTestId,
+      inert,
       leftIcon,
       onClick,
       reversed,
@@ -111,6 +112,7 @@ export const Button = forwardRef<
         },
       ),
       "data-testid": dataTestId,
+      inert,
       onClick,
       title,
     };
