@@ -3,6 +3,7 @@ import type { PlaceholderCardProps } from "./types";
 
 export const PlaceholderCard = ({
   className,
+  cursorDefault,
   "data-testid": dataTestId,
   inert,
   onClick,
@@ -11,6 +12,7 @@ export const PlaceholderCard = ({
   return (
     <Card
       className={className}
+      cursorDefault={cursorDefault}
       data-testid={dataTestId}
       inert={inert}
       onClick={onClick}

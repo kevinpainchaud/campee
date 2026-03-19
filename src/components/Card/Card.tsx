@@ -6,6 +6,7 @@ export const Card = ({
   active,
   children,
   className,
+  cursorDefault,
   "data-testid": dataTestId,
   "data-testvalue-key": dataTestValueKey,
   inert,
@@ -23,6 +24,7 @@ export const Card = ({
         className={classNames(
           "border-pill flex size-full overflow-hidden rounded-xl text-base font-semibold uppercase transition-none select-none *:w-full @min-[4rem]:rounded-2xl @min-[4rem]:text-2xl @min-[6rem]:rounded-3xl @min-[6rem]:text-4xl",
           { "shadow-pill": type !== "placeholder" },
+          { "cursor-default": cursorDefault },
           {
             "bg-lemon-50 dark:text-lemon-50 text-zinc-950 dark:bg-zinc-900":
               type === "frontface" && !active,

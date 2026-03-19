@@ -64,6 +64,7 @@ export const ParticipantCard = ({
                     backfaceCardStyleKey={
                       participantProfile.backface_card_style_key
                     }
+                    cursorDefault
                     inert={revealed}
                     onClick={() =>
                       setActionShown((actionShown) => !actionShown)
@@ -72,6 +73,7 @@ export const ParticipantCard = ({
                   />
                 ) : (
                   <PlaceholderCard
+                    cursorDefault
                     inert={revealed}
                     onClick={() =>
                       setActionShown((actionShown) => !actionShown)
@@ -85,9 +87,10 @@ export const ParticipantCard = ({
               })}
               frontfaceCard={
                 <FrontfaceCard
+                  cursorDefault
                   inert={!revealed}
                   onClick={() => setActionShown((actionShown) => !actionShown)}
-                  tagElement="button"
+                  tagElement={userParticipant ? "button" : "div"}
                   voteValue={participant.vote as Vote}
                 />
               }

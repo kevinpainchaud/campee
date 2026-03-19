@@ -8,6 +8,7 @@ import type { FrontfaceCardProps } from "./types";
 export const FrontfaceCard = ({
   active,
   className,
+  cursorDefault,
   "data-testid": dataTestId,
   "data-testvalue-key": dataTestValueKey,
   inert,
@@ -23,6 +24,7 @@ export const FrontfaceCard = ({
     <Card
       active={active}
       className={className}
+      cursorDefault={cursorDefault}
       data-testid={dataTestId}
       data-testvalue-key={dataTestValueKey}
       inert={inert}

@@ -9,6 +9,7 @@ export type CardProps = Pick<
   | "title"
 > & {
   active?: boolean;
+  cursorDefault?: boolean;
   "data-testid"?: string;
   "data-testvalue-key"?: string;
   disabled?: boolean;

@@ -4,6 +4,7 @@ import type { CardProps } from "../Card/types";
 export type BackfaceCardProps = Pick<
   CardProps,
   | "className"
+  | "cursorDefault"
   | "data-testid"
   | "data-testvalue-key"
   | "inert"

@@ -5,6 +5,7 @@ export type FrontfaceCardProps = Pick<
   CardProps,
   | "active"
   | "className"
+  | "cursorDefault"
   | "data-testid"
   | "data-testvalue-key"
   | "inert"

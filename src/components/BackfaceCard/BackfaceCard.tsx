@@ -5,6 +5,7 @@ import type { BackfaceCardProps } from "./types";
 export const BackfaceCard = ({
   backfaceCardStyleKey,
   className,
+  cursorDefault,
   "data-testid": dataTestId,
   "data-testvalue-key": dataTestValueKey,
   inert,
@@ -16,6 +17,7 @@ export const BackfaceCard = ({
   return (
     <Card
       className={className}
+      cursorDefault={cursorDefault}
       data-testid={dataTestId}
       data-testvalue-key={dataTestValueKey}
       inert={inert}
