@@ -43,6 +43,9 @@
       "confirm_button_label": "Confirmer",
       "title": "En êtes-vous sûr ?"
     },
+    "debug_mode_flag": {
+      "label": "Mode débogage activé"
+    },
     "feedback_drawer": {
       "contact_by_email_message": "Vous pouvez aussi nous contacter par e-mail :",
       "description": "Une idée pour nous améliorer ? Un bug à nous signaler ? Utilisez le formulaire ci-dessous pour partager vos retours avec nous !",
@@ -63,6 +66,9 @@
     },
     "nudge_sending_feature_card": {
       "title": "Envoi de wizz"
+    },
+    "user_display": {
+      "offline_label": "Hors-ligne"
     },
     "user_dropdown_content": {
       "user_profile_edit_drawer_toggle_button_label": "Mes informations",

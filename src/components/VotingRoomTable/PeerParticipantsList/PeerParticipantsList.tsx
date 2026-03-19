@@ -4,7 +4,7 @@ import { VotingRoomContext } from "../../../context/VotingRoomContext";
 import { ParticipantCard } from "../ParticipantCard/ParticipantCard";
 
 export const PeerParticipantsList = () => {
-  const { peerParticipants } = useContext(VotingRoomContext);
+  const { onlineUsersIds, peerParticipants } = useContext(VotingRoomContext);
 
   if (!peerParticipants) {
     return;
@@ -15,6 +15,7 @@ export const PeerParticipantsList = () => {
       {peerParticipants.map((peerParticipant) => (
         <ParticipantCard
           key={peerParticipant.id}
+          online={onlineUsersIds.includes(peerParticipant.user_id)}
           participant={peerParticipant}
         />
       ))}

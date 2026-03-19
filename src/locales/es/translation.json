@@ -43,6 +43,9 @@
       "confirm_button_label": "Confirmar",
       "title": "¿Está seguro?"
     },
+    "debug_mode_flag": {
+      "label": "Modo de depuración habilitado"
+    },
     "feedback_drawer": {
       "contact_by_email_message": "También puedes contactar con nosotros por correo electrónico:",
       "description": "¿Una idea para mejorar? ¿Un error que informarnos? Utilice el siguiente formulario para compartir sus comentarios con nosotros.",
@@ -63,6 +66,9 @@
     },
     "nudge_sending_feature_card": {
       "title": "Envío de toques"
+    },
+    "user_display": {
+      "offline_label": "Desconectado"
     },
     "user_dropdown_content": {
       "user_profile_edit_drawer_toggle_button_label": "Mis datos",

@@ -2,8 +2,9 @@ import type { User } from "@supabase/supabase-js";
 import { useQueryClient } from "@tanstack/react-query";
 import { uniqBy } from "lodash";
 import mitt from "mitt";
-import { useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 
+import { EnvContext } from "../context/EnvContext";
 import { VotingRoomContext } from "../context/VotingRoomContext";
 import { useAuth } from "../hooks/useAuth";
 import { getUserVotingRoomsQueryKey } from "../queries/useUserVotingRoomsQuery/queryKey";
@@ -27,6 +28,8 @@ export const VotingRoomProvider = ({
   children: React.ReactNode;
   invitationCode: VotingRoom["invitation_code"];
 }) => {
+  const { debugModeEnabled } = useContext(EnvContext);
+
   const { user } = useAuth();
   const queryClient = useQueryClient();
 
@@ -63,10 +66,13 @@ export const VotingRoomProvider = ({
       uniqBy<Participant>(
         participants
           ?.filter(({ user_id }) => user_id !== user?.id)
-          .filter(({ user_id }) => onlineUsersIds.includes(user_id)),
+          .filter(
+            ({ user_id }) =>
+              onlineUsersIds.includes(user_id) || debugModeEnabled,
+          ),
         "user_id",
       ),
-    [onlineUsersIds, participants, user?.id],
+    [debugModeEnabled, onlineUsersIds, participants, user?.id],
   );
 
   const userParticipantProfile = useMemo(
@@ -254,6 +260,7 @@ export const VotingRoomProvider = ({
       value={{
         emitter,
         isPending,
+        onlineUsersIds,
         participants,
         participantsError,
         participantsIsPending,

@@ -12,7 +12,10 @@ import { UserDisplay } from "../../UserDisplay/UserDisplay";
 import type { ParticipantCardProps } from "./types";
 import { useParticipantCard } from "./useParticipantCard";
 
-export const ParticipantCard = ({ participant }: ParticipantCardProps) => {
+export const ParticipantCard = ({
+  online,
+  participant,
+}: ParticipantCardProps) => {
   const {
     actionShown,
     flyingUpReactions,
@@ -32,7 +35,11 @@ export const ParticipantCard = ({ participant }: ParticipantCardProps) => {
   }
 
   return (
-    <div data-testid="participant-card" ref={containerRef}>
+    <div
+      className={classNames({ grayscale: !online })}
+      data-testid="participant-card"
+      ref={containerRef}
+    >
       <div className="fixed" style={{ width: containerWidth ?? undefined }}>
         <FlyingUpReactions
           flyingUpReactions={flyingUpReactions}
@@ -111,7 +118,7 @@ export const ParticipantCard = ({ participant }: ParticipantCardProps) => {
             )}
           </div>
         </div>
-        <UserDisplay profile={participantProfile} />
+        <UserDisplay online={online} profile={participantProfile} />
       </div>
     </div>
   );

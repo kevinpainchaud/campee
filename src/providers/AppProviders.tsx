@@ -9,6 +9,7 @@ import { queryClient } from "../lib/queryClient";
 import { AuthProvider } from "./AuthProvider";
 import { ConfirmProvider } from "./ConfirmProvider";
 import { DrawerProvider } from "./DrawerProvider";
+import { EnvProvider } from "./EnvProvider";
 import { SupabaseProvider } from "./SupabaseProvider";
 import { UserPreferencesProvider } from "./UserPreferencesProvider";
 
@@ -41,13 +42,15 @@ export const AppProviders = ({ children }: { children: React.ReactNode }) => {
             classes={{ containerRoot: classNames("z-50!") }}
             domRoot={document.body}
           >
-            <AuthProvider>
-              <UserPreferencesProvider>
-                <ConfirmProvider>
-                  <DrawerProvider>{children}</DrawerProvider>
-                </ConfirmProvider>
-              </UserPreferencesProvider>
-            </AuthProvider>
+            <EnvProvider>
+              <AuthProvider>
+                <UserPreferencesProvider>
+                  <ConfirmProvider>
+                    <DrawerProvider>{children}</DrawerProvider>
+                  </ConfirmProvider>
+                </UserPreferencesProvider>
+              </AuthProvider>
+            </EnvProvider>
           </SnackbarProvider>
         </HelmetProvider>
       </SupabaseProvider>

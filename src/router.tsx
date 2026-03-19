@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { createBrowserRouter, Outlet, ScrollRestoration } from "react-router";
 
+import { DebugModeFlag } from "./components/DebugModeFlag/DebugModeFlag";
 import { GlobalDrawers } from "./components/GlobalDrawers/GlobalDrawers";
 import { GlobalQueryErrorListener } from "./components/GlobalQueryErrorListener/GlobalQueryErrorListener";
 import {
@@ -61,6 +62,7 @@ export const router = createBrowserRouter([
           </Helmet>
           <SpeedInsights />
           <ScrollRestoration />
+          <DebugModeFlag />
           <ErrorBoundary FallbackComponent={ErrorPage}>
             <GlobalQueryErrorListener />
             <GlobalDrawers />

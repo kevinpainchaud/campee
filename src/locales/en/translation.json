@@ -43,6 +43,9 @@
       "confirm_button_label": "Confirm",
       "title": "Are you sure?"
     },
+    "debug_mode_flag": {
+      "label": "Debug mode enabled"
+    },
     "feedback_drawer": {
       "contact_by_email_message": "You can also contact us by email:",
       "description": "An idea to improve? A bug to report? Use the form below to share your feedback with us!",
@@ -63,6 +66,9 @@
     },
     "nudge_sending_feature_card": {
       "title": "Send nudges"
+    },
+    "user_display": {
+      "offline_label": "Offline"
     },
     "user_dropdown_content": {
       "user_profile_edit_drawer_toggle_button_label": "My information",

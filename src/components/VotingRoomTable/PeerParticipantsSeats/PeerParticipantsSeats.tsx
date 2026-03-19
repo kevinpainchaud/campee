@@ -4,7 +4,7 @@ import { VotingRoomContext } from "../../../context/VotingRoomContext";
 import { ParticipantCard } from "../ParticipantCard/ParticipantCard";
 
 export const PeerParticipantsSeats = () => {
-  const { peerParticipants } = useContext(VotingRoomContext);
+  const { onlineUsersIds, peerParticipants } = useContext(VotingRoomContext);
 
   return peerParticipants?.map((peerParticipant, index) => {
     const gap =
@@ -22,7 +22,10 @@ export const PeerParticipantsSeats = () => {
           offsetPath: "path(var(--table-path))",
         }}
       >
-        <ParticipantCard participant={peerParticipant} />
+        <ParticipantCard
+          online={onlineUsersIds.includes(peerParticipant.user_id)}
+          participant={peerParticipant}
+        />
       </div>
     );
   });

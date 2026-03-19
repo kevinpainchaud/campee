@@ -1,3 +1,4 @@
+import type { User } from "@supabase/supabase-js";
 import type { Emitter } from "mitt";
 import mitt from "mitt";
 import { createContext } from "react";
@@ -10,6 +11,7 @@ import type { VotingRoomEvents } from "../types/votingRoomEvents";
 export const VotingRoomContext = createContext<{
   emitter: Emitter<VotingRoomEvents>;
   isPending: boolean;
+  onlineUsersIds: User["id"][];
   participants?: Participant[];
   participantsError: Error | null;
   participantsIsPending: boolean;
@@ -23,6 +25,7 @@ export const VotingRoomContext = createContext<{
 }>({
   emitter: mitt(),
   isPending: true,
+  onlineUsersIds: [],
   participantsError: null,
   participantsIsPending: true,
   participantsProfilesError: null,
