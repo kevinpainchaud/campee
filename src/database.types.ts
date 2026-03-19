@@ -337,7 +337,7 @@ export type Database = {
         | "gaming"
         | "music"
         | "sport"
-      voting_system: "scrum" | "fibonacci" | "t-shirts"
+      voting_system: "scrum" | "fibonacci" | "t-shirts" | "sequential"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -475,7 +475,7 @@ export const Constants = {
         "music",
         "sport",
       ],
-      voting_system: ["scrum", "fibonacci", "t-shirts"],
+      voting_system: ["scrum", "fibonacci", "t-shirts", "sequential"],
     },
   },
 } as const
