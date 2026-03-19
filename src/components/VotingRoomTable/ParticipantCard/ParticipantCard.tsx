@@ -68,7 +68,7 @@ export const ParticipantCard = ({
                     onClick={() =>
                       setActionShown((actionShown) => !actionShown)
                     }
-                    tagElement="button"
+                    tagElement={userParticipant ? "button" : "div"}
                   />
                 ) : (
                   <PlaceholderCard
@@ -76,7 +76,7 @@ export const ParticipantCard = ({
                     onClick={() =>
                       setActionShown((actionShown) => !actionShown)
                     }
-                    tagElement="button"
+                    tagElement={userParticipant ? "button" : "div"}
                   />
                 )
               }
