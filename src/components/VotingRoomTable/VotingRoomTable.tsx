@@ -1,12 +1,9 @@
+import { useMeasure } from "@uidotdev/usehooks";
 import classNames from "classnames";
 import { useContext, useMemo } from "react";
-import { useTranslation } from "react-i18next";
-import { PiChatTeardropTextBold } from "react-icons/pi";
 
 import { VotingRoomContext } from "../../context/VotingRoomContext";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
-import { useDrawer } from "../../hooks/useDrawer";
-import { Button } from "../Button/Button";
 import { Spinner } from "../Spinner/Spinner";
 import { UserSeat } from "../UserSeat/UserSeat";
 import { EmptyVotingRoomState } from "./EmptyVotingRoomState/EmptyVotingRoomState";
@@ -17,6 +14,7 @@ import { useTablePath } from "./useTablePath";
 
 export const VotingRoomTable = ({
   className,
+  floatingLeftContent,
   onSeeQrCodeButtonClick,
 }: VotingRoomTableProps) => {
   const { isPending, peerParticipants, votingRoom } =
@@ -24,8 +22,9 @@ export const VotingRoomTable = ({
 
   const { breakpointMinLg, breakpointMinXl } = useBreakpoint();
   const { tablePath, tableRef } = useTablePath();
-  const { setFeedbackDrawerOpen } = useDrawer();
-  const { t } = useTranslation();
+
+  const [stickyBottomContainerRef, { height: stickyBottomContainerHeight }] =
+    useMeasure();
 
   const showParticipantsAsSeats = useMemo(() => {
     if (!peerParticipants) {
@@ -40,25 +39,30 @@ export const VotingRoomTable = ({
 
   return (
     <>
+      {floatingLeftContent && stickyBottomContainerHeight !== null && (
+        <div
+          className="fixed left-4 z-10 hidden lg:left-6 lg:flex"
+          style={{
+            top: `${(window.innerHeight - stickyBottomContainerHeight) / 2}px`,
+          }}
+        >
+          {floatingLeftContent}
+        </div>
+      )}
       <main
         className={classNames(
           className,
           "relative flex items-center justify-center",
-          {
-            "overflow-y-auto": !showParticipantsAsSeats,
-          },
         )}
       >
         {isPending ? (
-          <div className="m-auto flex w-full justify-center">
-            <Spinner />
-          </div>
+          <Spinner />
         ) : votingRoom ? (
           peerParticipants && peerParticipants.length > 0 ? (
             <>
               {showParticipantsAsSeats ? (
                 <div
-                  className="relative h-full w-full"
+                  className="absolute inset-0 size-full"
                   style={
                     { "--table-path": `"${tablePath}"` } as React.CSSProperties
                   }
@@ -66,7 +70,7 @@ export const VotingRoomTable = ({
                   <PeerParticipantsSeats />
                 </div>
               ) : (
-                <div className="m-auto p-4">
+                <div className="p-4">
                   <PeerParticipantsList />
                 </div>
               )}
@@ -79,17 +83,11 @@ export const VotingRoomTable = ({
             </div>
           )
         ) : undefined}
-        <div className="absolute top-1/2 left-4 hidden -translate-y-1/2 lg:left-6 lg:flex">
-          <Button
-            leftIcon={PiChatTeardropTextBold}
-            onClick={() => setFeedbackDrawerOpen(true)}
-            tagElement="button"
-            title={t("entities.feedback.actions.share_feedback")}
-            variant="outline"
-          ></Button>
-        </div>
       </main>
-      <div className="sticky bottom-0">
+      <div
+        className="sticky bottom-0 overflow-clip"
+        ref={stickyBottomContainerRef}
+      >
         <div className="h-4 lg:h-14" ref={tableRef}>
           <svg className="w-full">
             <path

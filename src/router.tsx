@@ -11,7 +11,6 @@ import {
   LEGAL_NOTICES_ROUTE_PATH,
   VOTING_ROOM_ROUTE_PATH,
 } from "./constants/routes";
-import { FullscreenLayout } from "./layouts/FullscreenLayout/FullscreenLayout";
 import { MainLayout } from "./layouts/MainLayout/MainLayout";
 import { ErrorPage } from "./pages/ErrorPage/ErrorPage";
 import { FrontPage } from "./pages/FrontPage/FrontPage";
@@ -44,7 +43,6 @@ export const router = createBrowserRouter([
             path: VOTING_ROOM_ROUTE_PATH,
           },
         ],
-        element: <FullscreenLayout />,
       },
       {
         element: <NotFoundPage />,

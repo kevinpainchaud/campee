@@ -1,12 +1,16 @@
+import { useWindowScroll } from "@uidotdev/usehooks";
 import classNames from "classnames";
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { PiChatTeardropTextBold } from "react-icons/pi";
 
+import { Button } from "../../components/Button/Button";
 import { VotingRoomEditionDrawer } from "../../components/VotingRoomEditionDrawer/VotingRoomEditionDrawer";
 import { QrCodeDrawer } from "../../components/VotingRoomTable/EmptyVotingRoomState/QrCodeDrawer/QrCodeDrawer";
 import { VotingRoomTable } from "../../components/VotingRoomTable/VotingRoomTable";
 import { VotingRoomContext } from "../../context/VotingRoomContext";
+import { useDrawer } from "../../hooks/useDrawer";
 import { useVotingRoomUrlCopy } from "../../hooks/useVotingRoomUrlCopy";
 import { getTitleTagContent } from "../../utils/titleTag";
 import { Header } from "./Header/Header";
@@ -32,6 +36,7 @@ export const VotingRoomPage = () => {
     votingRoomJoiningIsPending,
   } = useVotingRoomJoining();
   const { nudged } = useNudged();
+  const { setFeedbackDrawerOpen } = useDrawer();
   const { t } = useTranslation();
 
   useVotingRoomNotifications();
@@ -40,6 +45,9 @@ export const VotingRoomPage = () => {
   const [mainMenuDrawer, setMainMenuDrawer] = useState(false);
   const [votingRoomEditionDrawer, setVotingRoomEditionDrawer] = useState(false);
   const [qrCodeDrawerOpen, setQrCodeDrawerOpen] = useState(false);
+  const [{ y: windowY }] = useWindowScroll();
+
+  const windowScrolled = windowY && windowY > 100;
 
   if (votingRoomError) {
     throw votingRoomError;
@@ -60,33 +68,48 @@ export const VotingRoomPage = () => {
           <title>{getTitleTagContent(votingRoom.name)}</title>
         </Helmet>
       )}
-      <div className="h-full overflow-clip">
+      <div
+        className={classNames("flex min-h-screen flex-col", {
+          "animate-wizz repeat-infinite": nudged,
+        })}
+      >
         <div
-          className={classNames("flex h-full flex-col", {
-            "animate-wizz repeat-infinite": nudged,
-          })}
+          className={classNames(
+            "sticky top-0 z-10 flex flex-col gap-4 bg-linear-to-b p-4 pb-0 lg:p-6 lg:pb-0",
+            {
+              "from-lemon-100 dark:from-zinc-900": windowScrolled,
+              "from-transparent": !windowScrolled,
+            },
+          )}
         >
-          <div className="flex flex-col gap-4 p-4 lg:p-6">
-            <Header
-              onMainMenuDrawerToggleButtonClick={() => setMainMenuDrawer(true)}
-              onVotingRoomEditionButtonClick={() =>
-                setVotingRoomEditionDrawer(true)
-              }
+          <Header
+            onMainMenuDrawerToggleButtonClick={() => setMainMenuDrawer(true)}
+            onVotingRoomEditionButtonClick={() =>
+              setVotingRoomEditionDrawer(true)
+            }
+            onVotingRoomJoiningButtonClick={joinVotingRoom}
+            votingRoomJoiningIsPending={votingRoomJoiningIsPending}
+          />
+          <div className="flex justify-center *:w-full empty:hidden lg:hidden">
+            <MainActions
               onVotingRoomJoiningButtonClick={joinVotingRoom}
               votingRoomJoiningIsPending={votingRoomJoiningIsPending}
             />
-            <div className="flex justify-center *:w-full empty:hidden lg:hidden">
-              <MainActions
-                onVotingRoomJoiningButtonClick={joinVotingRoom}
-                votingRoomJoiningIsPending={votingRoomJoiningIsPending}
-              />
-            </div>
           </div>
-          <VotingRoomTable
-            className="grow"
-            onSeeQrCodeButtonClick={() => setQrCodeDrawerOpen(true)}
-          />
         </div>
+        <VotingRoomTable
+          className="grow"
+          floatingLeftContent={
+            <Button
+              leftIcon={PiChatTeardropTextBold}
+              onClick={() => setFeedbackDrawerOpen(true)}
+              tagElement="button"
+              title={t("entities.feedback.actions.share_feedback")}
+              variant="outline"
+            />
+          }
+          onSeeQrCodeButtonClick={() => setQrCodeDrawerOpen(true)}
+        />
       </div>
       <MainMenuDrawer
         onSeeQrCodeButtonClick={() => setQrCodeDrawerOpen(true)}
