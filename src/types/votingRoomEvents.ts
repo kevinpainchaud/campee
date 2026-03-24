@@ -18,7 +18,7 @@ export type NudgeSentVotingRoomEventProps = CommonVotingRoomEventProps & {
   nudge: Nudge;
 };
 
-export type ParticipantVoteEditedVotingRoomEventProps =
+export type ParticipantVoteChangedVotingRoomEventProps =
   CommonVotingRoomEventProps;
 
 export type VotesRevealedVotingRoomEventProps = CommonVotingRoomEventProps;
@@ -32,7 +32,7 @@ export type VotingRoomEvents = {
   nameChanged: NameChangedVotingRoomEventProps;
   newVotingRoundStarted: NewVotingRoundStartedVotingRoomEventProps;
   nudgeSent: NudgeSentVotingRoomEventProps;
-  participantVoteEdited: ParticipantVoteEditedVotingRoomEventProps;
+  participantVoteChanged: ParticipantVoteChangedVotingRoomEventProps;
   votesRevealed: VotesRevealedVotingRoomEventProps;
   votingSystemChanged: VotingSystemChangedVotingRoomEventProps;
 };

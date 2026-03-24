@@ -6,7 +6,7 @@ import { useTracking } from "../../../hooks/useTracking";
 import { useNudgeSendingMutation } from "../../../mutations/useNudgeSendingMutation";
 import type {
   NudgeSentVotingRoomEventProps,
-  ParticipantVoteEditedVotingRoomEventProps,
+  ParticipantVoteChangedVotingRoomEventProps,
 } from "../../../types/votingRoomEvents";
 import type { FlyingUpReaction } from "../../FlyingUpReactions/types";
 import type { useParticipantCardProps } from "./types";
@@ -80,26 +80,26 @@ export const useParticipantCard = ({
     [participant.user_id, participantsProfiles],
   );
 
-  const handleParticipantVoteEdited = useCallback(
-    ({ by }: ParticipantVoteEditedVotingRoomEventProps) => {
-      if (by !== participant.user_id) {
+  const handleParticipantVoteChange = useCallback(
+    ({ by }: ParticipantVoteChangedVotingRoomEventProps) => {
+      if (by !== participant.user_id || !votingRoom?.votes_revealed) {
         return;
       }
 
       setZooming(true);
     },
-    [participant.user_id],
+    [participant.user_id, votingRoom?.votes_revealed],
   );
 
   useEffect(() => {
     emitter.on("nudgeSent", handleNudgeSent);
-    emitter.on("participantVoteEdited", handleParticipantVoteEdited);
+    emitter.on("participantVoteChanged", handleParticipantVoteChange);
 
     return () => {
       emitter.off("nudgeSent", handleNudgeSent);
-      emitter.off("participantVoteEdited", handleParticipantVoteEdited);
+      emitter.off("participantVoteChanged", handleParticipantVoteChange);
     };
-  }, [emitter, handleNudgeSent, handleParticipantVoteEdited]);
+  }, [emitter, handleNudgeSent, handleParticipantVoteChange]);
 
   return {
     actionShown,

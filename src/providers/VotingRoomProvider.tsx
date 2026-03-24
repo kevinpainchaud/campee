@@ -125,7 +125,7 @@ export const VotingRoomProvider = ({
           );
           refetchParticipantsProfiles();
         },
-        onParticipantUpdate: (newParticipant) =>
+        onParticipantUpdate: (newParticipant, oldParticipant) => {
           queryClient.setQueryData<Participant[]>(
             getVotingRoomParticipantsQueryKey({
               votingRoomId,
@@ -136,7 +136,15 @@ export const VotingRoomProvider = ({
                   ? newParticipant
                   : participant,
               ),
-          ),
+          );
+
+          // Emit event on vote edition
+          if (newParticipant.vote !== oldParticipant?.vote) {
+            emitter.emit("participantVoteChanged", {
+              by: newParticipant.user_id,
+            });
+          }
+        },
         onProfileDelete: (oldProfileId) =>
           queryClient.setQueryData<Profile[]>(
             getVotingRoomParticipantsProfilesQueryKey({
