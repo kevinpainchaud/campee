@@ -9,7 +9,7 @@ import type {
   NameChangedVotingRoomEventProps,
   NewVotingRoundStartedVotingRoomEventProps,
   VotesRevealedVotingRoomEventProps,
-  VotingSystemChanged,
+  VotingSystemChangedVotingRoomEventProps,
 } from "../../types/votingRoomEvents";
 import { getVotingSystemLabel } from "../../utils/vote";
 
@@ -91,7 +91,7 @@ export const useVotingRoomNotifications = () => {
   );
 
   const handleVotingSystemChanged = useCallback(
-    ({ by, newVotingSystem }: VotingSystemChanged) => {
+    ({ by, newVotingSystem }: VotingSystemChangedVotingRoomEventProps) => {
       handleNotification({
         by,
         getMessage: ({ byUserDisplayName }) =>

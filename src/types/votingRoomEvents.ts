@@ -18,16 +18,21 @@ export type NudgeSentVotingRoomEventProps = CommonVotingRoomEventProps & {
   nudge: Nudge;
 };
 
+export type ParticipantVoteEditedVotingRoomEventProps =
+  CommonVotingRoomEventProps;
+
 export type VotesRevealedVotingRoomEventProps = CommonVotingRoomEventProps;
 
-export type VotingSystemChanged = CommonVotingRoomEventProps & {
-  newVotingSystem: VotingRoom["voting_system"];
-};
+export type VotingSystemChangedVotingRoomEventProps =
+  CommonVotingRoomEventProps & {
+    newVotingSystem: VotingRoom["voting_system"];
+  };
 
 export type VotingRoomEvents = {
   nameChanged: NameChangedVotingRoomEventProps;
   newVotingRoundStarted: NewVotingRoundStartedVotingRoomEventProps;
   nudgeSent: NudgeSentVotingRoomEventProps;
+  participantVoteEdited: ParticipantVoteEditedVotingRoomEventProps;
   votesRevealed: VotesRevealedVotingRoomEventProps;
-  votingSystemChanged: VotingSystemChanged;
+  votingSystemChanged: VotingSystemChangedVotingRoomEventProps;
 };

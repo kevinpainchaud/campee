@@ -1,6 +1,6 @@
 export type TreeDimensionCardProps = Pick<
   React.HTMLAttributes<HTMLDivElement>,
-  "className"
+  "className" | "onAnimationEnd"
 > & {
   backfaceCard: React.ReactNode;
   frontfaceCard: React.ReactNode;

@@ -25,7 +25,10 @@ export const ParticipantCard = ({
     revealed,
     setActionShown,
     setFlyingUpReactions,
+    setNudged,
+    setZooming,
     userParticipant,
+    zooming,
   } = useParticipantCard({ participant });
   const [containerRef, { width: containerWidth }] = useMeasure();
   const { t } = useTranslation();
@@ -83,7 +86,8 @@ export const ParticipantCard = ({
                 )
               }
               className={classNames("w-24 lg:w-28 xl:w-36", {
-                "animate-shake repeat-infinite": nudged,
+                "animate-shake": nudged,
+                "animate-zoom": zooming,
               })}
               frontfaceCard={
                 <FrontfaceCard
@@ -94,6 +98,10 @@ export const ParticipantCard = ({
                   voteValue={participant.vote as Vote}
                 />
               }
+              onAnimationEnd={() => {
+                setNudged(false);
+                setZooming(false);
+              }}
               revealed={revealed}
             />
             {userParticipant && (

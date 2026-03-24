@@ -1,17 +1,13 @@
 import { uniqBy } from "lodash";
-import {
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { useCallback, useContext, useEffect, useMemo, useState } from "react";
 
 import { VotingRoomContext } from "../../../context/VotingRoomContext";
 import { useTracking } from "../../../hooks/useTracking";
 import { useNudgeSendingMutation } from "../../../mutations/useNudgeSendingMutation";
-import type { NudgeSentVotingRoomEventProps } from "../../../types/votingRoomEvents";
+import type {
+  NudgeSentVotingRoomEventProps,
+  ParticipantVoteEditedVotingRoomEventProps,
+} from "../../../types/votingRoomEvents";
 import type { FlyingUpReaction } from "../../FlyingUpReactions/types";
 import type { useParticipantCardProps } from "./types";
 
@@ -25,14 +21,13 @@ export const useParticipantCard = ({
 
   const { mutate: sendNudge } = useNudgeSendingMutation();
 
-  const nudgedTimeoutIdRef = useRef<NodeJS.Timeout>(null);
-
   const [actionShown, setActionShown] = useState(false);
   const [flyingUpReactions, setFlyingUpReactions] = useState<
     FlyingUpReaction[]
   >([]);
 
   const [nudged, setNudged] = useState(false);
+  const [zooming, setZooming] = useState(false);
 
   const participantProfile = useMemo(
     () => participantsProfiles?.find(({ id }) => id === participant.user_id),
@@ -81,27 +76,30 @@ export const useParticipantCard = ({
       );
 
       setNudged(true);
-
-      if (nudgedTimeoutIdRef.current) {
-        clearTimeout(nudgedTimeoutIdRef.current);
-      }
-
-      nudgedTimeoutIdRef.current = setTimeout(() => setNudged(false), 300);
     },
     [participant.user_id, participantsProfiles],
   );
 
+  const handleParticipantVoteEdited = useCallback(
+    ({ by }: ParticipantVoteEditedVotingRoomEventProps) => {
+      if (by !== participant.user_id) {
+        return;
+      }
+
+      setZooming(true);
+    },
+    [participant.user_id],
+  );
+
   useEffect(() => {
     emitter.on("nudgeSent", handleNudgeSent);
+    emitter.on("participantVoteEdited", handleParticipantVoteEdited);
 
     return () => {
       emitter.off("nudgeSent", handleNudgeSent);
-
-      if (nudgedTimeoutIdRef.current) {
-        clearTimeout(nudgedTimeoutIdRef.current);
-      }
+      emitter.off("participantVoteEdited", handleParticipantVoteEdited);
     };
-  }, [emitter, handleNudgeSent]);
+  }, [emitter, handleNudgeSent, handleParticipantVoteEdited]);
 
   return {
     actionShown,
@@ -112,6 +110,9 @@ export const useParticipantCard = ({
     revealed,
     setActionShown,
     setFlyingUpReactions,
+    setNudged,
+    setZooming,
     userParticipant,
+    zooming,
   };
 };

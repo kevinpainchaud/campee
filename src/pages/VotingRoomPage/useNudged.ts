@@ -1,6 +1,6 @@
 import { throttle } from "lodash";
 import { useSnackbar } from "notistack";
-import { useCallback, useContext, useEffect, useRef, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { VotingRoomContext } from "../../context/VotingRoomContext";
@@ -13,8 +13,6 @@ export const useNudged = () => {
   const { user } = useAuth();
   const { enqueueSnackbar } = useSnackbar();
   const { t } = useTranslation();
-
-  const timeoutIdRef = useRef<NodeJS.Timeout>(null);
 
   const [nudged, setNudged] = useState(false);
 
@@ -36,12 +34,6 @@ export const useNudged = () => {
       }
 
       setNudged(true);
-
-      if (timeoutIdRef.current) {
-        clearTimeout(timeoutIdRef.current);
-      }
-
-      timeoutIdRef.current = setTimeout(() => setNudged(false), 300);
     },
     [enqueueSnackbar, participantsProfiles, t, user?.id],
   );
@@ -53,12 +45,11 @@ export const useNudged = () => {
 
     return () => {
       emitter.off("nudgeSent", throttledHandleNudge);
-
-      if (timeoutIdRef.current) {
-        clearTimeout(timeoutIdRef.current);
-      }
     };
   }, [emitter, handleNudge]);
 
-  return { nudged };
+  return {
+    nudged,
+    setNudged,
+  };
 };

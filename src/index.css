@@ -11,6 +11,7 @@
   --animate-scrolling: scrolling 20000ms linear infinite;
   --animate-shake: shake 300ms ease-in-out;
   --animate-wizz: wizz 300ms ease-in-out;
+  --animate-zoom: zoom 750ms ease-in-out;
 
   /* Breakpoints */
   --breakpoint-xs: 30rem;
@@ -145,6 +146,16 @@
     }
     100% {
       transform: translateY(0.5rem);
+    }
+  }
+
+  @keyframes zoom {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.25);
     }
   }
 }

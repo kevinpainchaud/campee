@@ -6,10 +6,14 @@ export const TreeDimensionCard = ({
   backfaceCard,
   className,
   frontfaceCard,
+  onAnimationEnd,
   revealed,
 }: TreeDimensionCardProps) => {
   return (
-    <div className={classNames(className, "relative perspective-distant")}>
+    <div
+      className={classNames(className, "relative perspective-distant")}
+      onAnimationEnd={onAnimationEnd}
+    >
       <div
         className={classNames("size-full duration-1000 transform-3d", {
           "rotate-y-180": revealed,

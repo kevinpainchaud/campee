@@ -35,7 +35,7 @@ export const VotingRoomPage = () => {
     votingRoomJoiningDrawer,
     votingRoomJoiningIsPending,
   } = useVotingRoomJoining();
-  const { nudged } = useNudged();
+  const { nudged, setNudged } = useNudged();
   const { setFeedbackDrawerOpen } = useDrawer();
   const { t } = useTranslation();
 
@@ -70,8 +70,9 @@ export const VotingRoomPage = () => {
       )}
       <div
         className={classNames("flex min-h-screen flex-col", {
-          "animate-wizz repeat-infinite": nudged,
+          "animate-wizz": nudged,
         })}
+        onAnimationEnd={() => setNudged(false)}
       >
         <div
           className={classNames(
