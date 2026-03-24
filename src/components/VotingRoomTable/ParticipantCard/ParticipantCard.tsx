@@ -50,7 +50,7 @@ export const ParticipantCard = ({
           }
         />
       </div>
-      <div className="flex flex-col items-center gap-2 lg:gap-4">
+      <div className="flex flex-col items-center gap-3 lg:gap-4">
         <div
           className="group/card-wrapper not-pointer-coarse:p-4 not-pointer-coarse:pb-0"
           onMouseEnter={() => setActionShown(true)}
