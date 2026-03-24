@@ -85,7 +85,7 @@ export const ParticipantCard = ({
                   />
                 )
               }
-              className={classNames("w-24 lg:w-28 xl:w-36", {
+              className={classNames("w-24 lg:w-28 2xl:w-32", {
                 "animate-shake": nudged,
                 "animate-zoom": zooming,
               })}

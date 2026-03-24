@@ -11,7 +11,7 @@ export const PeerParticipantsList = () => {
   }
 
   return (
-    <div className="m-auto flex w-full flex-wrap items-center justify-center gap-x-6 gap-y-4 lg:max-w-8/12">
+    <div className="flex w-full flex-wrap items-center justify-center gap-x-6 gap-y-4 lg:px-20">
       {peerParticipants.map((peerParticipant) => (
         <ParticipantCard
           key={peerParticipant.id}
