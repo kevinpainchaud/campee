@@ -11,10 +11,10 @@ import { WhyUseItSection } from "./WhyUseItSection/WhyUseItSection";
 export const FrontPage = () => {
   return (
     <div className="flex flex-col gap-16 md:gap-26">
-      <div className="centered-container">
+      <div className="centered-container animate-in slide-in-from-bottom-[3rem] md:slide-in-from-bottom-[6rem] fade-in fill-mode-backwards transition-none delay-200 duration-1000">
         <HeroSection />
       </div>
-      <div className="centered-container max-w-4xl">
+      <div className="centered-container animate-in fade-in slide-in-from-bottom-[3rem] md:slide-in-from-bottom-[6rem] fill-mode-backwards max-w-4xl delay-400 duration-1000">
         <DemoPlayer />
       </div>
       <div className="centered-container">
