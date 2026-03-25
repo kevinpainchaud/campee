@@ -93,12 +93,7 @@ export const BackfaceCardBackground = ({
   }, [backfaceCardStyle.color]);
 
   return (
-    <div
-      className={classNames(
-        "overflow-hidden transition-colors",
-        colorClassName,
-      )}
-    >
+    <div className={classNames("overflow-hidden", colorClassName)}>
       <div
         className="grid w-[112%] -translate-x-[6%] -rotate-12 gap-2.5"
         style={{
