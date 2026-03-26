@@ -8,8 +8,10 @@
   /* Animations */
   --animate-click-ping: click-ping 500ms ease-in-out;
   --animate-flying-up: flying-up 1.5s ease-in-out;
+  --animate-rising: rising 1.5s linear;
   --animate-scrolling: scrolling 20000ms linear infinite;
   --animate-shake: shake 300ms ease-in-out;
+  --animate-swaying: swaying 3s ease-in-out infinite alternate;
   --animate-wizz: wizz 300ms ease-in-out;
   --animate-zoom: zoom 750ms ease-in-out;
 
@@ -67,6 +69,19 @@
     }
   }
 
+  @keyframes rising {
+    0% {
+      transform: translateY(0);
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-80vh);
+      opacity: 0;
+    }
+  }
+
   @keyframes scrolling {
     0% {
       transform: translateX(-100%);
@@ -83,6 +98,18 @@
     }
     50% {
       transform: rotate(5deg);
+    }
+  }
+
+  @keyframes swaying {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(calc(var(--x-translation, 0) + 4rem));
+    }
+    100% {
+      transform: translateX(calc(var(--x-translation, 0)));
     }
   }
 

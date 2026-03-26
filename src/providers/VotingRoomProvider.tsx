@@ -140,11 +140,13 @@ export const VotingRoomProvider = ({
 
           // Emit event on vote edition
           if (newParticipant.vote !== oldParticipant.vote) {
-            emitter.emit("participantVoteChanged", {
-              by: newParticipant.user_id,
-              newVote: newParticipant.vote,
-              oldVote: oldParticipant.vote,
-            });
+            setTimeout(() =>
+              emitter.emit("participantVoteChanged", {
+                by: newParticipant.user_id,
+                newVote: newParticipant.vote,
+                oldVote: oldParticipant.vote,
+              }),
+            );
           }
         },
         onProfileDelete: (oldProfileId) =>

@@ -18,8 +18,8 @@ import { InfoDetails } from "./InfoDetails/InfoDetails";
 import { MainActions } from "./MainActions/MainActions";
 import { MainMenuDrawer } from "./MainMenuDrawer/MainMenuDrawer";
 import { useNudged } from "./useNudged";
-import { useVotingRoomConfettis } from "./useVotingRoomConfettis";
 import { useVotingRoomJoining } from "./useVotingRoomJoining";
+import { useVotingRoomMatchedVotes } from "./useVotingRoomMatchedVotes";
 import { useVotingRoomNotifications } from "./useVotingRoomNotifications";
 
 export const VotingRoomPage = () => {
@@ -41,7 +41,7 @@ export const VotingRoomPage = () => {
   const { t } = useTranslation();
 
   useVotingRoomNotifications();
-  useVotingRoomConfettis();
+  useVotingRoomMatchedVotes();
 
   const [mainMenuDrawer, setMainMenuDrawer] = useState(false);
   const [votingRoomEditionDrawer, setVotingRoomEditionDrawer] = useState(false);

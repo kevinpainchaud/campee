@@ -10,6 +10,7 @@ import { AuthProvider } from "./AuthProvider";
 import { ConfirmProvider } from "./ConfirmProvider";
 import { DrawerProvider } from "./DrawerProvider";
 import { EnvProvider } from "./EnvProvider";
+import { FlyingUpEmojiProvider } from "./FlyingUpEmojiProvider";
 import { SupabaseProvider } from "./SupabaseProvider";
 import { UserPreferencesProvider } from "./UserPreferencesProvider";
 
@@ -46,7 +47,9 @@ export const AppProviders = ({ children }: { children: React.ReactNode }) => {
               <AuthProvider>
                 <UserPreferencesProvider>
                   <ConfirmProvider>
-                    <DrawerProvider>{children}</DrawerProvider>
+                    <DrawerProvider>
+                      <FlyingUpEmojiProvider>{children}</FlyingUpEmojiProvider>
+                    </DrawerProvider>
                   </ConfirmProvider>
                 </UserPreferencesProvider>
               </AuthProvider>

@@ -35,7 +35,7 @@ const meta = {
             tagElement="button"
             variant="primary"
           >
-            🫨 Nudge
+            Nudge
           </Button>
         </div>
       );
