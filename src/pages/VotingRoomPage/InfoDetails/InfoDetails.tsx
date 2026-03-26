@@ -31,6 +31,7 @@ export const InfoDetails = () => {
   if (
     !votingRoom ||
     isPending ||
+    peerParticipants?.length === 0 ||
     !votingRoom.votes_revealed ||
     votesAverage === undefined
   ) {
