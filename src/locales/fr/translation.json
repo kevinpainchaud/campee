@@ -253,6 +253,7 @@
       "notifications": {
         "name_changed_message": "{{user_display_name}} a changé le nom de la session par : {{new_name}}",
         "new_voting_round_started_message": "{{user_display_name}} a démarré un nouveau vote",
+        "participant_vote_changed_message": "{{ user_display_name }} a modifié son vote de {{ old_vote }} à {{ new_vote }}",
         "votes_revealed_message": "{{user_display_name}} a révélé les votes",
         "voting_system_changed_message": "{{user_display_name}} a changé le système de vote par : {{voting_system_label}}"
       },

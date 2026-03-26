@@ -8,13 +8,15 @@ import { useAuth } from "../../hooks/useAuth";
 import type {
   NameChangedVotingRoomEventProps,
   NewVotingRoundStartedVotingRoomEventProps,
+  ParticipantVoteChangedVotingRoomEventProps,
   VotesRevealedVotingRoomEventProps,
   VotingSystemChangedVotingRoomEventProps,
 } from "../../types/votingRoomEvents";
-import { getVotingSystemLabel } from "../../utils/vote";
+import { getVoteLabel, getVotingSystemLabel } from "../../utils/vote";
 
 export const useVotingRoomNotifications = () => {
-  const { emitter, participantsProfiles } = useContext(VotingRoomContext);
+  const { emitter, participantsProfiles, votingRoom } =
+    useContext(VotingRoomContext);
 
   const { user } = useAuth();
   const { enqueueSnackbar } = useSnackbar();
@@ -107,22 +109,47 @@ export const useVotingRoomNotifications = () => {
     [handleNotification, t],
   );
 
+  const handleParticipantVoteChange = useCallback(
+    ({ by, newVote, oldVote }: ParticipantVoteChangedVotingRoomEventProps) => {
+      if (!votingRoom?.votes_revealed) {
+        return;
+      }
+
+      handleNotification({
+        by,
+        getMessage: ({ byUserDisplayName }) =>
+          t(
+            "pages.voting_room_page.notifications.participant_vote_changed_message",
+            {
+              new_vote: getVoteLabel(newVote),
+              old_vote: getVoteLabel(oldVote),
+              user_display_name: byUserDisplayName,
+            },
+          ),
+      });
+    },
+    [handleNotification, t, votingRoom?.votes_revealed],
+  );
+
   useEffect(() => {
     emitter.on("votesRevealed", handleVotesRevealed);
     emitter.on("newVotingRoundStarted", handleNewVotingRoundStarted);
     emitter.on("nameChanged", handleNameChanged);
     emitter.on("votingSystemChanged", handleVotingSystemChanged);
+    emitter.on("participantVoteChanged", handleParticipantVoteChange);
 
     return () => {
       emitter.off("votesRevealed", handleVotesRevealed);
       emitter.off("newVotingRoundStarted", handleNewVotingRoundStarted);
       emitter.off("nameChanged", handleNameChanged);
       emitter.off("votingSystemChanged", handleVotingSystemChanged);
+      emitter.off("participantVoteChanged", handleParticipantVoteChange);
     };
   }, [
     emitter,
     handleNameChanged,
     handleNewVotingRoundStarted,
+    handleParticipantVoteChange,
     handleVotesRevealed,
     handleVotingSystemChanged,
   ]);

@@ -18,7 +18,7 @@ export const FrontfaceCard = ({
   tagElement,
   voteValue,
 }: FrontfaceCardProps) => {
-  const voteLabel = useMemo(() => getVoteLabel({ voteValue }), [voteValue]);
+  const voteLabel = useMemo(() => getVoteLabel(voteValue), [voteValue]);
 
   return (
     <Card

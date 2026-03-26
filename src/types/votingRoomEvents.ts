@@ -1,6 +1,7 @@
 import type { User } from "@supabase/supabase-js";
 
 import type { Nudge } from "./nudge";
+import type { Participant } from "./participant";
 import type { VotingRoom } from "./votingRoom";
 
 type CommonVotingRoomEventProps = {
@@ -19,7 +20,10 @@ export type NudgeSentVotingRoomEventProps = CommonVotingRoomEventProps & {
 };
 
 export type ParticipantVoteChangedVotingRoomEventProps =
-  CommonVotingRoomEventProps;
+  CommonVotingRoomEventProps & {
+    newVote: Participant["vote"];
+    oldVote: Participant["vote"];
+  };
 
 export type VotesRevealedVotingRoomEventProps = CommonVotingRoomEventProps;
 

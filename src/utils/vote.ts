@@ -15,7 +15,7 @@ export const getVoteValues = (votingSystem: VotingSystem) => [
 export const getVotingSystemLabel = (votingSystem: VotingSystem) =>
   `${upperFirst(votingSystem)} (${VOTING_SYSTEM_VOTE_VALUES[votingSystem].map((allowedVoteValue) => allowedVoteValue.toUpperCase()).join(", ")})`;
 
-export const getVoteLabel = ({ voteValue }: { voteValue: Vote }): string => {
+export const getVoteLabel = (voteValue: Vote): string => {
   if (voteValue === "coffee") {
     return "☕";
   } else if (voteValue === "questionMark") {
