@@ -244,6 +244,9 @@
       "title": "Página no encontrada"
     },
     "voting_room_page": {
+      "info_details": {
+        "votes_average": "Promedio de votos: {{ votesAverage }}"
+      },
       "invite_dropdown": {
         "trigger_button_label": "Invitar"
       },

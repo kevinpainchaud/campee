@@ -9,6 +9,7 @@ import { Logo } from "../../../components/Logo/Logo";
 import { ThemeSwitcherButton } from "../../../components/ThemeSwitcherButton/ThemeSwitcherButton";
 import { UserDropdown } from "../../../components/UserDropdown/UserDropdown";
 import { VotingRoomContext } from "../../../context/VotingRoomContext";
+import { InfoDetails } from "../InfoDetails/InfoDetails";
 import { InviteDropdown } from "../InviteDropdown/InviteDropdown";
 import { MainActions } from "../MainActions/MainActions";
 import type { HeaderProps } from "./types";
@@ -49,11 +50,14 @@ export const Header = ({
       />
       {votingRoom && !isPending && (
         <>
-          <div className="hidden grow *:w-full lg:flex lg:justify-center lg:*:w-auto">
+          <div className="relative hidden grow justify-center empty:hidden lg:flex">
             <MainActions
               onVotingRoomJoiningButtonClick={onVotingRoomJoiningButtonClick}
               votingRoomJoiningIsPending={votingRoomJoiningIsPending}
             />
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 translate-y-full empty:hidden">
+              <InfoDetails />
+            </div>
           </div>
           <nav className="hidden lg:flex">
             <ul className="flex items-center gap-6">

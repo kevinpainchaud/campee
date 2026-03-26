@@ -244,6 +244,9 @@
       "title": "Page introuvable"
     },
     "voting_room_page": {
+      "info_details": {
+        "votes_average": "Moyenne des votes : {{ votesAverage }}"
+      },
       "invite_dropdown": {
         "trigger_button_label": "Inviter"
       },

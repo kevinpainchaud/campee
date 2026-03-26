@@ -14,6 +14,7 @@ import { useDrawer } from "../../hooks/useDrawer";
 import { useVotingRoomUrlCopy } from "../../hooks/useVotingRoomUrlCopy";
 import { getTitleTagContent } from "../../utils/titleTag";
 import { Header } from "./Header/Header";
+import { InfoDetails } from "./InfoDetails/InfoDetails";
 import { MainActions } from "./MainActions/MainActions";
 import { MainMenuDrawer } from "./MainMenuDrawer/MainMenuDrawer";
 import { useNudged } from "./useNudged";
@@ -91,11 +92,14 @@ export const VotingRoomPage = () => {
             onVotingRoomJoiningButtonClick={joinVotingRoom}
             votingRoomJoiningIsPending={votingRoomJoiningIsPending}
           />
-          <div className="flex justify-center *:w-full empty:hidden lg:hidden">
+          <div className="relative flex *:w-full empty:hidden lg:hidden">
             <MainActions
               onVotingRoomJoiningButtonClick={joinVotingRoom}
               votingRoomJoiningIsPending={votingRoomJoiningIsPending}
             />
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 translate-y-full empty:hidden">
+              <InfoDetails />
+            </div>
           </div>
         </div>
         <VotingRoomTable
