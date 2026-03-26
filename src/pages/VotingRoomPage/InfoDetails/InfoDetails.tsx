@@ -6,7 +6,7 @@ import { VotingRoomContext } from "../../../context/VotingRoomContext";
 import { average } from "../../../utils/array";
 
 export const InfoDetails = () => {
-  const { peerParticipants, userParticipant, votingRoom } =
+  const { isPending, peerParticipants, userParticipant, votingRoom } =
     useContext(VotingRoomContext);
 
   const { t } = useTranslation();
@@ -22,13 +22,18 @@ export const InfoDetails = () => {
       .map(parseFloat);
 
     if (votes.length === 0) {
-      return undefined;
+      return;
     }
 
     return round(average(votes), 1);
   }, [peerParticipants, userParticipant]);
 
-  if (!votingRoom?.votes_revealed || votesAverage === undefined) {
+  if (
+    !votingRoom ||
+    isPending ||
+    !votingRoom.votes_revealed ||
+    votesAverage === undefined
+  ) {
     return null;
   }
 
