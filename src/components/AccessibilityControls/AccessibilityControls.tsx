@@ -6,7 +6,9 @@ export const AccessibilityControls = () => {
     <nav>
       <ul className="flex items-center">
         <li>
-          <ThemeSwitcherButton />
+          <ThemeSwitcherButton
+            tooltipOptions={{ gap: 0, placement: "top-start" }}
+          />
         </li>
         <li>
           <LanguageSwitcherDropdown />

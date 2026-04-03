@@ -52,7 +52,9 @@ export const Header = ({ className }: HeaderProps) => {
                 <UserDropdown />
               </li>
               <li>
-                <ThemeSwitcherButton />
+                <ThemeSwitcherButton
+                  tooltipOptions={{ gap: 0, placement: "bottom" }}
+                />
               </li>
             </ul>
           </nav>

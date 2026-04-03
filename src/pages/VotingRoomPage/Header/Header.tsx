@@ -7,6 +7,7 @@ import { Link } from "react-router";
 import { Button } from "../../../components/Button/Button";
 import { Logo } from "../../../components/Logo/Logo";
 import { ThemeSwitcherButton } from "../../../components/ThemeSwitcherButton/ThemeSwitcherButton";
+import { Tooltip } from "../../../components/Tooltip/Tooltip";
 import { UserDropdown } from "../../../components/UserDropdown/UserDropdown";
 import { VotingRoomContext } from "../../../context/VotingRoomContext";
 import { InfoDetails } from "../InfoDetails/InfoDetails";
@@ -63,13 +64,17 @@ export const Header = ({
             <ul className="flex items-center gap-6">
               {userParticipant && (
                 <li>
-                  <Button
-                    leftIcon={PiGearBold}
-                    onClick={onVotingRoomEditionButtonClick}
-                    tagElement="button"
-                    title={t("entities.voting_room.edition.title")}
-                    variant="outline"
-                  />
+                  <Tooltip
+                    content={t("entities.voting_room.edition.title")}
+                    placement="bottom"
+                  >
+                    <Button
+                      leftIcon={PiGearBold}
+                      onClick={onVotingRoomEditionButtonClick}
+                      tagElement="button"
+                      variant="outline"
+                    />
+                  </Tooltip>
                 </li>
               )}
               <li>
@@ -79,7 +84,9 @@ export const Header = ({
                 <UserDropdown />
               </li>
               <li>
-                <ThemeSwitcherButton />
+                <ThemeSwitcherButton
+                  tooltipOptions={{ placement: "bottom-end" }}
+                />
               </li>
             </ul>
           </nav>

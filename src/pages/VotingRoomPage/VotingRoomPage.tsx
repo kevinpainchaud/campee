@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { PiChatTeardropTextBold } from "react-icons/pi";
 
 import { Button } from "../../components/Button/Button";
+import { Tooltip } from "../../components/Tooltip/Tooltip";
 import { VotingRoomEditionDrawer } from "../../components/VotingRoomEditionDrawer/VotingRoomEditionDrawer";
 import { QrCodeDrawer } from "../../components/VotingRoomTable/EmptyVotingRoomState/QrCodeDrawer/QrCodeDrawer";
 import { VotingRoomTable } from "../../components/VotingRoomTable/VotingRoomTable";
@@ -105,13 +106,17 @@ export const VotingRoomPage = () => {
         <VotingRoomTable
           className="grow"
           floatingLeftContent={
-            <Button
-              leftIcon={PiChatTeardropTextBold}
-              onClick={() => setFeedbackDrawerOpen(true)}
-              tagElement="button"
-              title={t("entities.feedback.actions.share_feedback")}
-              variant="outline"
-            />
+            <Tooltip
+              content={t("entities.feedback.actions.share_feedback")}
+              placement="right"
+            >
+              <Button
+                leftIcon={PiChatTeardropTextBold}
+                onClick={() => setFeedbackDrawerOpen(true)}
+                tagElement="button"
+                variant="outline"
+              />
+            </Tooltip>
           }
           onSeeQrCodeButtonClick={() => setQrCodeDrawerOpen(true)}
         />
